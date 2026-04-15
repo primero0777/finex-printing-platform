@@ -1,13 +1,13 @@
-# Finex Printing Platform
+# Finex Printing Platform used
 
 A modern web platform for managing and showcasing printing services.
 
-## Features
+## Features used
 - Multi-format printing
 - Custom orders
 - Modern UI/UX
 
-## Tech
+## Tech used
 - HTML
 - CSS
 - JavaScript
