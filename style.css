@@ -245,6 +245,9 @@ button { cursor: pointer; font-family: inherit; }
 /* ======== HERO ======== */
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   background: var(--blue-dark);
   display: flex;
   align-items: center;
