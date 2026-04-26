@@ -36,7 +36,6 @@
         <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a></li>
         <li><a href="devis.html" class="btn btn-nav" data-i18n="nav.devis">Devis gratuit</a></li>
         <li class="nav-controls">
-          <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">🌙</button>
           <div class="lang-switcher">
             <button class="lang-btn active" data-lang="fr">FR</button>
             <button class="lang-btn" data-lang="en">EN</button>
@@ -76,28 +75,28 @@
             <div class="contact-item">
               <div class="contact-icon">📱</div>
               <div>
-                <strong>WhatsApp (Priorité)</strong>
+                <strong data-i18n="contact.info.wa">WhatsApp (Priorité)</strong>
                 <a href="https://wa.me/22897511723" target="_blank">+228 97 51 17 23</a>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">📍</div>
               <div>
-                <strong>Adresse</strong>
+                <strong data-i18n="contact.info.addr">Adresse</strong>
                 <span>Adidogomé Wessomé, Lomé, Togo</span>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">⏰</div>
               <div>
-                <strong>Horaires</strong>
+                <strong data-i18n="contact.info.hours">Horaires</strong>
                 <span>Lun–Sam : 8h00 – 19h00</span>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">✉️</div>
               <div>
-                <strong>Email</strong>
+                <strong data-i18n="contact.info.email">Email</strong>
                 <span>contact via WhatsApp</span>
               </div>
             </div>
@@ -109,7 +108,7 @@
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
               </svg>
               <div>
-                <strong>Écrire sur WhatsApp</strong>
+                <strong data-i18n="contact.wa.btn.title">Écrire sur WhatsApp</strong>
                 <span>+228 97 51 17 23</span>
               </div>
             </a>
@@ -120,19 +119,19 @@
           <form class="contact-form" id="contactForm" novalidate>
             <h3 data-i18n="contact.form.title">Envoyez-nous un message</h3>
             <div class="form-group">
-              <label for="name">Nom complet *</label>
+              <label for="name" data-i18n="contact.label.name">Nom complet *</label>
               <input type="text" id="name" name="name" placeholder="Votre nom" required />
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" data-i18n="contact.label.email">Email</label>
               <input type="email" id="email" name="email" placeholder="votre@email.com" />
             </div>
             <div class="form-group">
-              <label for="phone">Téléphone *</label>
+              <label for="phone" data-i18n="contact.label.phone">Téléphone *</label>
               <input type="tel" id="phone" name="phone" placeholder="+228 XX XX XX XX" required />
             </div>
             <div class="form-group">
-              <label for="subject">Sujet</label>
+              <label for="subject" data-i18n="contact.label.subject">Sujet</label>
               <select id="subject" name="subject">
                 <option value="Demande d'information">Demande d'information</option>
                 <option value="Devis">Devis</option>
@@ -142,7 +141,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Votre message *</label>
+              <label for="message" data-i18n="contact.label.message">Votre message *</label>
               <textarea id="message" name="message" rows="4" placeholder="Décrivez votre besoin ou projet..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.form.btn">Envoyer via WhatsApp</button>
@@ -172,25 +171,25 @@
       </div>
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-question">Quel est le délai de réponse à une demande de devis ? <span class="faq-icon">+</span></button>
+          <button class="faq-question"><span data-i18n="contact.faq.q1">Quel est le délai de réponse à une demande de devis ?</span> <span class="faq-icon">+</span></button>
           <div class="faq-answer">
             <p>Nous répondons à toutes les demandes de devis dans un délai maximum de 2 heures ouvrables, du lundi au samedi de 8h à 19h. Le soir et le dimanche, votre message sera traité dès la prochaine ouverture.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Comment puis-je passer une commande ? <span class="faq-icon">+</span></button>
+          <button class="faq-question"><span data-i18n="contact.faq.q2">Comment puis-je passer une commande ?</span> <span class="faq-icon">+</span></button>
           <div class="faq-answer">
             <p>La manière la plus rapide est de nous contacter via WhatsApp au +228 97 51 17 23 ou de remplir le formulaire de devis sur cette page. Vous pouvez aussi venir directement à notre atelier d'Adidogomé Wessomé du lundi au samedi.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Puis-je venir visiter votre atelier ? <span class="faq-icon">+</span></button>
+          <button class="faq-question"><span data-i18n="contact.faq.q3">Puis-je venir visiter votre atelier ?</span> <span class="faq-icon">+</span></button>
           <div class="faq-answer">
             <p>Oui, notre atelier est ouvert au public du lundi au samedi de 8h à 19h. Nous vous accueillons pour discuter de vos projets, voir des échantillons de nos réalisations et obtenir un devis sur place. Un appel préalable via WhatsApp est apprécié pour s'assurer de la disponibilité de notre équipe.</p>
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Comment se déroule le suivi de ma commande ? <span class="faq-icon">+</span></button>
+          <button class="faq-question"><span data-i18n="contact.faq.q4">Comment se déroule le suivi de ma commande ?</span> <span class="faq-icon">+</span></button>
           <div class="faq-answer">
             <p>Une fois votre commande confirmée, vous recevez des mises à jour régulières via WhatsApp : confirmation de commande, validation du BAT (bon à tirer), démarrage de production et notification de livraison/disponibilité. Vous pouvez aussi nous contacter à tout moment pour connaître l'avancement de votre commande.</p>
           </div>
@@ -223,10 +222,10 @@
         </div>
         <div class="footer-links">
           <h4 data-i18n="footer.svc.h">Services</h4>
-          <a href="services.html#serigraphie">Sérigraphie Textile</a>
-          <a href="services.html#impression">Impression Numérique</a>
-          <a href="services.html#design">Design Graphique</a>
-          <a href="services.html#objets">Objets Personnalisés</a>
+          <a href="services.html#serigraphie" data-i18n="footer.svc.s1">Sérigraphie Textile</a>
+          <a href="services.html#impression" data-i18n="footer.svc.s2">Impression Numérique</a>
+          <a href="services.html#design" data-i18n="footer.svc.s3">Design Graphique</a>
+          <a href="services.html#objets" data-i18n="footer.svc.s4">Objets Personnalisés</a>
         </div>
         <div class="footer-links">
           <h4 data-i18n="footer.contact.h">Contact</h4>

@@ -36,7 +36,6 @@
         <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         <li><a href="devis.html" class="btn btn-nav btn-nav--active" data-i18n="nav.devis">Devis gratuit</a></li>
         <li class="nav-controls">
-          <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">🌙</button>
           <div class="lang-switcher">
             <button class="lang-btn active" data-lang="fr">FR</button>
             <button class="lang-btn" data-lang="en">EN</button>
@@ -75,20 +74,20 @@
       <div class="steps-how">
         <div class="step-how reveal" data-delay="0">
           <div class="step-how-num">1</div>
-          <h3>Remplissez le formulaire</h3>
-          <p>Décrivez votre projet en 3 étapes simples : type de service, détails du projet, et vos coordonnées.</p>
+          <h3 data-i18n="devis.how.s1.title">Remplissez le formulaire</h3>
+          <p data-i18n="devis.how.s1.p">Décrivez votre projet en 3 étapes simples : type de service, détails du projet, et vos coordonnées.</p>
         </div>
         <div class="step-how-arrow reveal" data-delay="50">→</div>
         <div class="step-how reveal" data-delay="100">
           <div class="step-how-num">2</div>
-          <h3>Recevez votre devis sous 24h</h3>
-          <p>Notre équipe analyse votre demande et vous envoie un devis détaillé et personnalisé via WhatsApp.</p>
+          <h3 data-i18n="devis.how.s2.title">Recevez votre devis sous 24h</h3>
+          <p data-i18n="devis.how.s2.p">Notre équipe analyse votre demande et vous envoie un devis détaillé et personnalisé via WhatsApp.</p>
         </div>
         <div class="step-how-arrow reveal" data-delay="150">→</div>
         <div class="step-how reveal" data-delay="200">
           <div class="step-how-num">3</div>
-          <h3>Validez et lancez la production</h3>
-          <p>Après votre accord, nous lançons la production et vous livrons dans les délais convenus.</p>
+          <h3 data-i18n="devis.how.s3.title">Validez et lancez la production</h3>
+          <p data-i18n="devis.how.s3.p">Après votre accord, nous lançons la production et vous livrons dans les délais convenus.</p>
         </div>
       </div>
     </div>
@@ -104,17 +103,17 @@
           <div class="stepper-steps">
             <div class="stepper-step active" data-step="1">
               <div class="stepper-step-num">1</div>
-              <span>Service</span>
+              <span data-i18n="devis.step1.label">Service</span>
             </div>
             <div class="stepper-line"></div>
             <div class="stepper-step" data-step="2">
               <div class="stepper-step-num">2</div>
-              <span>Détails</span>
+              <span data-i18n="devis.step2.label">Détails</span>
             </div>
             <div class="stepper-line"></div>
             <div class="stepper-step" data-step="3">
               <div class="stepper-step-num">3</div>
-              <span>Coordonnées</span>
+              <span data-i18n="devis.step3.label">Coordonnées</span>
             </div>
           </div>
           <div class="stepper-bar">
@@ -135,8 +134,8 @@
                   <path d="M18 22 L22 28 L30 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
-              <h3>Sérigraphie Textile</h3>
-              <p>T-shirts, polos, uniformes, casquettes, sacs…</p>
+              <h3 data-i18n="devis.sc1.title">Sérigraphie Textile</h3>
+              <p data-i18n="devis.sc1.p">T-shirts, polos, uniformes, casquettes, sacs…</p>
             </div>
             <div class="service-choice-card" data-service="impression">
               <div class="sc-icon">
@@ -146,8 +145,8 @@
                   <circle cx="24" cy="24" r="4" fill="currentColor" opacity=".5"/>
                 </svg>
               </div>
-              <h3>Impression Numérique</h3>
-              <p>Bâches, flyers, affiches, roll-ups, autocollants…</p>
+              <h3 data-i18n="devis.sc2.title">Impression Numérique</h3>
+              <p data-i18n="devis.sc2.p">Bâches, flyers, affiches, roll-ups, autocollants…</p>
             </div>
             <div class="service-choice-card" data-service="design">
               <div class="sc-icon">
@@ -157,8 +156,8 @@
                   <path d="M12 36 L36 36 M16 40 L32 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h3>Design Graphique</h3>
-              <p>Logo, charte graphique, maquettes, retouche…</p>
+              <h3 data-i18n="devis.sc3.title">Design Graphique</h3>
+              <p data-i18n="devis.sc3.p">Logo, charte graphique, maquettes, retouche…</p>
             </div>
             <div class="service-choice-card" data-service="objets">
               <div class="sc-icon">
@@ -168,8 +167,8 @@
                   <ellipse cx="24" cy="22" rx="14" ry="5" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </div>
-              <h3>Objets Personnalisés</h3>
-              <p>Mugs, stylos, carnets, porte-clés, badges…</p>
+              <h3 data-i18n="devis.sc4.title">Objets Personnalisés</h3>
+              <p data-i18n="devis.sc4.p">Mugs, stylos, carnets, porte-clés, badges…</p>
             </div>
           </div>
           <div class="stepper-nav">
@@ -399,23 +398,23 @@
       <div class="guarantees-grid">
         <div class="guarantee-item reveal" data-delay="0">
           <div class="guarantee-icon">🆓</div>
-          <h3>Devis 100% Gratuit</h3>
-          <p>Notre devis est entièrement gratuit et sans aucune obligation d'achat de votre part.</p>
+          <h3 data-i18n="devis.g1.title">Devis 100% Gratuit</h3>
+          <p data-i18n="devis.g1.p">Notre devis est entièrement gratuit et sans aucune obligation d'achat de votre part.</p>
         </div>
         <div class="guarantee-item reveal" data-delay="100">
           <div class="guarantee-icon">⚡</div>
-          <h3>Réponse sous 24h</h3>
-          <p>Nous nous engageons à vous envoyer votre devis personnalisé dans les 24 heures ouvrables.</p>
+          <h3 data-i18n="devis.g2.title">Réponse sous 24h</h3>
+          <p data-i18n="devis.g2.p">Nous nous engageons à vous envoyer votre devis personnalisé dans les 24 heures ouvrables.</p>
         </div>
         <div class="guarantee-item reveal" data-delay="200">
           <div class="guarantee-icon">🤝</div>
-          <h3>Sans Engagement</h3>
-          <p>Recevoir un devis ne vous engage à rien. Vous décidez librement de donner suite ou non.</p>
+          <h3 data-i18n="devis.g3.title">Sans Engagement</h3>
+          <p data-i18n="devis.g3.p">Recevoir un devis ne vous engage à rien. Vous décidez librement de donner suite ou non.</p>
         </div>
         <div class="guarantee-item reveal" data-delay="300">
           <div class="guarantee-icon">🎯</div>
-          <h3>Conseils Personnalisés</h3>
-          <p>Notre équipe vous conseille sur les meilleures options selon votre budget et vos besoins.</p>
+          <h3 data-i18n="devis.g4.title">Conseils Personnalisés</h3>
+          <p data-i18n="devis.g4.p">Notre équipe vous conseille sur les meilleures options selon votre budget et vos besoins.</p>
         </div>
       </div>
     </div>
@@ -445,10 +444,10 @@
         </div>
         <div class="footer-links">
           <h4 data-i18n="footer.svc.h">Services</h4>
-          <a href="services.html#serigraphie">Sérigraphie Textile</a>
-          <a href="services.html#impression">Impression Numérique</a>
-          <a href="services.html#design">Design Graphique</a>
-          <a href="services.html#objets">Objets Personnalisés</a>
+          <a href="services.html#serigraphie" data-i18n="footer.svc.s1">Sérigraphie Textile</a>
+          <a href="services.html#impression" data-i18n="footer.svc.s2">Impression Numérique</a>
+          <a href="services.html#design" data-i18n="footer.svc.s3">Design Graphique</a>
+          <a href="services.html#objets" data-i18n="footer.svc.s4">Objets Personnalisés</a>
         </div>
         <div class="footer-links">
           <h4 data-i18n="footer.contact.h">Contact</h4>

@@ -246,7 +246,6 @@ button { cursor: pointer; font-family: inherit; }
 .hero {
   min-height: 100vh;
   min-height: 100dvh;
-  height: 100vh;
   height: 100dvh;
   background: var(--blue-dark);
   display: flex;
@@ -1313,94 +1312,8 @@ button { cursor: pointer; font-family: inherit; }
    DARK / LIGHT MODE
    =================================== */
 
-/* Smooth theme transition on everything that matters */
-body {
-  transition: background 0.35s ease, color 0.35s ease;
-}
-
-/* Light mode overrides — body.light-mode flips every token */
-body.light-mode {
-  --blue-dark: #f0f4ff;
-  --blue-mid:  #dce6ff;
-  --white:     #ffffff;
-  --gray-50:   #f7f9fc;
-  --gray-100:  #eef2f8;
-  --gray-200:  #d8e2f0;
-  --text:      #0f1d35;
-  --text-muted:#5b6f8a;
-}
-
-/* Hero section stays dark in light mode — it's the brand anchor */
-body.light-mode .hero { background: #0a0f2e; }
-body.light-mode .hero .hero-title,
-body.light-mode .hero .hero-badge,
-body.light-mode .hero .hero-sub,
-body.light-mode .hero .hero-stats { color: inherit; }
-
-/* Navbar — light mode explicit adjustments */
-body.light-mode .navbar.scrolled {
-  background: rgba(255,255,255,.97);
-}
-body.light-mode .page-inner .navbar {
-  background: rgba(255,255,255,.97);
-}
-
-/* Partners and footer stay dark */
-body.light-mode .partners { background: #0a0f2e; }
-body.light-mode .footer   { background: #0a0f2e; }
-body.light-mode .cta-section { background: linear-gradient(135deg, #0a0f2e, #0d1a4a, #0a1a5c); }
-body.light-mode .page-hero { background: #0a0f2e; }
-body.light-mode .counters-section { background: linear-gradient(135deg, #0a0f2e, #0d1a4a); }
-
-/* Sections that are white/gray get proper light treatment */
-body.light-mode .section { background: var(--white); }
-body.light-mode .services { background: var(--gray-50); }
-body.light-mode .portfolio { background: var(--gray-50); }
-body.light-mode .about { background: var(--white); }
-body.light-mode .contact { background: var(--gray-50); }
-body.light-mode .testimonials { background: var(--white); }
-body.light-mode .why-us { background: var(--white); }
-
-/* Service card, contact card etc. stay white */
-body.light-mode .service-card,
-body.light-mode .testi-card,
-body.light-mode .contact-card,
-body.light-mode .contact-form-wrap,
-body.light-mode .why-card,
-body.light-mode .stepper-wrap,
-body.light-mode .value-card,
-body.light-mode .team-card,
-body.light-mode .step-how,
-body.light-mode .guarantee-item {
-  background: var(--white);
-  border-color: var(--gray-200);
-}
-
-/* Inline form inputs */
-body.light-mode .form-group input,
-body.light-mode .form-group textarea,
-body.light-mode .form-group select {
-  background: var(--white);
-  color: var(--text);
-  border-color: var(--gray-200);
-}
-
-/* Filter buttons */
-body.light-mode .filter-btn {
-  background: var(--white);
-  border-color: var(--gray-200);
-  color: var(--text-muted);
-}
-
-/* Mobile nav drawer stays dark */
-@media (max-width: 768px) {
-  body.light-mode .nav-links {
-    background: #0a0f2e;
-  }
-}
-
 /* ===================================
-   NAVBAR CONTROLS (theme + lang)
+   NAVBAR CONTROLS (lang)
    =================================== */
 .nav-controls {
   display: flex;
@@ -1408,39 +1321,6 @@ body.light-mode .filter-btn {
   gap: 8px;
   margin-left: 8px;
   flex-shrink: 0;
-}
-
-/* Theme toggle button */
-.theme-toggle {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,.25);
-  background: rgba(255,255,255,.08);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: var(--transition);
-  flex-shrink: 0;
-  line-height: 1;
-}
-.theme-toggle:hover {
-  background: rgba(255,255,255,.18);
-  border-color: rgba(255,255,255,.5);
-}
-.navbar.scrolled .theme-toggle,
-.page-inner .navbar .theme-toggle {
-  border-color: var(--gray-200);
-  background: var(--gray-50);
-  color: var(--text);
-}
-.navbar.scrolled .theme-toggle:hover,
-.page-inner .navbar .theme-toggle:hover {
-  background: var(--gray-100);
-  border-color: var(--blue);
-  color: var(--blue);
 }
 
 /* Lang switcher */
@@ -1499,9 +1379,4 @@ body.light-mode .filter-btn {
     border-color: rgba(255,255,255,.25);
   }
   .lang-btn { color: rgba(255,255,255,.6); }
-  .nav-links .nav-controls .theme-toggle {
-    border-color: rgba(255,255,255,.25);
-    background: rgba(255,255,255,.08);
-    color: var(--white);
-  }
 }
