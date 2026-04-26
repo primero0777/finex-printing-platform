@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — FINEX PRO | Nos Réalisations à Lomé, Togo</title>
+  <meta name="description" content="Découvrez les réalisations de FINEX PRO : sérigraphie textile, impression numérique, design graphique et objets personnalisés à Lomé, Togo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="/assets/images/photo_2026-04-15_07-44-41 (2).jpg" type="image/x-icon">
+</head>
+<body class="page-inner">
+
+  <a href="https://wa.me/22897511723?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20des%20services%20d%27impression."
+     class="wa-float" target="_blank" rel="noopener" aria-label="Contact WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark"><img src="/assets/images/photo_2026-04-15_07-44-41 (2).jpg" alt="FINEX PRO"></span>
+        <span class="logo-text">FINEX <em>PRO</em></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="devis.html" class="btn btn-nav">Devis gratuit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <div class="hero-mesh"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container">
+      <div class="page-hero-content">
+        <nav class="breadcrumb" aria-label="fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Portfolio</span>
+        </nav>
+        <h1 class="page-hero-title reveal">Nos Réalisations</h1>
+        <p class="page-hero-sub reveal">Des projets concrets qui témoignent de notre savoir-faire et de notre engagement pour la qualité.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio complet -->
+  <section class="section portfolio">
+    <div class="container">
+      <div class="portfolio-filter reveal">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="serigraphie">Sérigraphie</button>
+        <button class="filter-btn" data-filter="impression">Impression</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="objets">Objets</button>
+      </div>
+
+      <div class="portfolio-grid portfolio-grid--full" id="portfolioGrid">
+
+        <!-- Sérigraphie -->
+        <div class="portfolio-item reveal" data-category="serigraphie"
+             data-title="T-shirts Uniformes Entreprise"
+             data-category-label="Sérigraphie Textile"
+             data-desc="Série de 200 t-shirts personnalisés pour KA Services SARL. Impression 4 couleurs, sérigraphie haute densité sur coton premium.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#14a4ff33,#0000ff22)">
+            <div class="portfolio-placeholder">
+              <img src="/assets/images/image.png" alt="T-shirts uniformes" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.6">
+              <div class="portfolio-label-overlay">T-shirts Uniformes</div>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>T-shirts Uniformes</span>
+            <small>Sérigraphie Textile</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="serigraphie"
+             data-title="Polos Entreprise Logo"
+             data-category-label="Sérigraphie Textile"
+             data-desc="Commande de 150 polos professionnels avec logo brodé et sérigraphie couleur pour une société de sécurité de Lomé.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#0000ff22,#14a4ff22)">
+            <div class="portfolio-placeholder">
+              <img src="/assets/images/image_4.png" alt="Polos entreprise" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.6">
+              <div class="portfolio-label-overlay">Polos Entreprise</div>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Polos Entreprise</span>
+            <small>Sérigraphie Textile</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="serigraphie"
+             data-title="Uniformes Scolaires"
+             data-category-label="Sérigraphie Textile"
+             data-desc="Production de 500 uniformes scolaires (t-shirts + tabliers) pour l'École Internationale de Lomé. Identité visuelle forte et couleurs institutionnelles.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#14a4ff44,#0000ff11)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Uniformes Scolaires</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><path d="M15 15 L10 8 L50 8 L45 15 L45 48 L15 48 Z" stroke="rgba(255,255,255,.8)" stroke-width="2" fill="none"/><path d="M24 32 L28 36 L38 26" stroke="rgba(255,255,255,.8)" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Uniformes Scolaires</span>
+            <small>Sérigraphie Textile</small>
+          </div>
+        </div>
+
+        <!-- Impression -->
+        <div class="portfolio-item reveal" data-category="impression"
+             data-title="Bâche Grand Format Événement"
+             data-category-label="Impression Numérique"
+             data-desc="Bâche 6×3m pour un grand événement culturel à Lomé. Impression UV haute résolution, résistante aux intempéries, installation comprise.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#0000ff22,#14a4ff33)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Bâche Événement 6×3m</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><rect x="5" y="10" width="50" height="38" rx="4" stroke="rgba(255,255,255,.8)" stroke-width="2"/><path d="M15 30 Q25 18 35 28 Q42 36 50 24" stroke="rgba(255,255,255,.8)" stroke-width="2" fill="none"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Bâche Grand Format</span>
+            <small>Impression Numérique</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="impression"
+             data-title="Affiches & Roll-ups Salon"
+             data-category-label="Impression Numérique"
+             data-desc="Pack complet pour participation à un salon commercial : 2 roll-ups 85×200cm, 10 affiches A1, 500 flyers A5 et 300 cartes de visite.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#14a4ff33,#0000ff11)">
+            <div class="portfolio-placeholder">
+              <img src="/assets/images/image_3.png" alt="Roll-ups salon" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.6">
+              <div class="portfolio-label-overlay">Roll-ups & Affiches</div>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Affiches &amp; Roll-ups</span>
+            <small>Impression Numérique</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="impression"
+             data-title="Flyers Campagne Marketing"
+             data-category-label="Impression Numérique"
+             data-desc="Impression de 5 000 flyers A5 recto-verso pour la campagne d'ouverture d'une nouvelle boutique à Lomé. Papier couché 135g, finition brillante.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#0000ff11,#14a4ff44)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Flyers Campagne</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><rect x="10" y="6" width="40" height="50" rx="3" stroke="rgba(255,255,255,.8)" stroke-width="2"/><rect x="16" y="14" width="28" height="18" rx="2" fill="rgba(255,255,255,.2)"/><path d="M16 40 L44 40 M16 46 L34 46" stroke="rgba(255,255,255,.8)" stroke-width="2" stroke-linecap="round" opacity=".6"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Flyers Campagne</span>
+            <small>Impression Numérique</small>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="portfolio-item reveal" data-category="design"
+             data-title="Logo & Identité Visuelle"
+             data-category-label="Design Graphique"
+             data-desc="Création complète de l'identité visuelle pour Togoshop : logo, palette de couleurs, typographie, charte graphique, et déclinaisons sur supports digitaux et print.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#14a4ff22,#0000ff33)">
+            <div class="portfolio-placeholder">
+              <img src="/assets/images/image_2.png" alt="Logo Togoshop" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:.6">
+              <div class="portfolio-label-overlay">Logo &amp; Charte</div>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Logo &amp; Identité Visuelle</span>
+            <small>Design Graphique</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="design"
+             data-title="Brochure Corporate"
+             data-category-label="Design Graphique"
+             data-desc="Conception et mise en page d'une brochure institutionnelle 16 pages pour une ONG togolaise. Design moderne, photos retouchées, contenu bilingue français/anglais.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#0000ff33,#14a4ff22)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Brochure Corporate</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><rect x="8" y="6" width="44" height="50" rx="3" stroke="rgba(255,255,255,.8)" stroke-width="2"/><path d="M16 18 L44 18 M16 26 L44 26 M16 34 L32 34" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" opacity=".7"/><rect x="16" y="40" width="28" height="8" rx="1" fill="rgba(255,255,255,.2)"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Brochure Corporate</span>
+            <small>Design Graphique</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="design"
+             data-title="Visuels Réseaux Sociaux"
+             data-category-label="Design Graphique"
+             data-desc="Pack de 20 visuels pour les réseaux sociaux (Facebook, Instagram) d'une marque de mode togolaise. Templates réutilisables, cohérence graphique garantie.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#14a4ff33,#0000ff22)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Visuels Réseaux</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><rect x="8" y="8" width="20" height="20" rx="3" stroke="rgba(255,255,255,.8)" stroke-width="2"/><rect x="32" y="8" width="20" height="20" rx="3" stroke="rgba(255,255,255,.8)" stroke-width="2"/><rect x="8" y="32" width="20" height="20" rx="3" stroke="rgba(255,255,255,.8)" stroke-width="2"/><rect x="32" y="32" width="20" height="20" rx="3" stroke="rgba(255,255,255,.8)" stroke-width="2"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Visuels Réseaux Sociaux</span>
+            <small>Design Graphique</small>
+          </div>
+        </div>
+
+        <!-- Objets -->
+        <div class="portfolio-item reveal" data-category="objets"
+             data-title="Mugs Personnalisés Entreprise"
+             data-category-label="Objets Personnalisés"
+             data-desc="Commande de 100 mugs personnalisés pour la fête de fin d'année de Banque Lomé Express. Logo en sublimation haute qualité, résistant au lave-vaisselle.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#0000ff11,#14a4ff33)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Mugs Personnalisés</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><path d="M14 18 Q14 12 30 12 Q46 12 46 18 L46 44 Q46 50 30 50 Q14 50 14 44Z" stroke="rgba(255,255,255,.8)" stroke-width="2" fill="none"/><ellipse cx="30" cy="18" rx="16" ry="5" stroke="rgba(255,255,255,.8)" stroke-width="1.5"/><path d="M46 22 Q56 22 56 30 Q56 38 46 38" stroke="rgba(255,255,255,.8)" stroke-width="2" fill="none"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Mugs Personnalisés</span>
+            <small>Objets Personnalisés</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="objets"
+             data-title="Stylos & Carnets Séminaire"
+             data-category-label="Objets Personnalisés"
+             data-desc="Kit de 80 participants pour un séminaire professionnel : stylo gravé, carnet A5, badge nominatif et sac tissu sérigraphié. Livraison en 48h.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#14a4ff22,#0000ff22)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Kit Séminaire</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><rect x="18" y="8" width="24" height="44" rx="3" stroke="rgba(255,255,255,.8)" stroke-width="2"/><path d="M22 20 L38 20 M22 28 L38 28 M22 36 L30 36" stroke="rgba(255,255,255,.8)" stroke-width="1.5" stroke-linecap="round" opacity=".7"/><path d="M38 50 L44 56" stroke="rgba(255,255,255,.8)" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Stylos &amp; Carnets</span>
+            <small>Objets Personnalisés</small>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal" data-category="objets"
+             data-title="Porte-clés & Badges Événement"
+             data-category-label="Objets Personnalisés"
+             data-desc="200 porte-clés acryliques personnalisés + 200 badges pour un festival culturel à Lomé. Impression 4 couleurs, finition brillante.">
+          <div class="portfolio-img" style="background:linear-gradient(135deg,#0000ff22,#14a4ff11)">
+            <div class="portfolio-placeholder pf-gradient">
+              <span class="pf-title">Porte-clés &amp; Badges</span>
+              <svg viewBox="0 0 60 60" fill="none" width="40" height="40"><circle cx="30" cy="22" r="12" stroke="rgba(255,255,255,.8)" stroke-width="2"/><path d="M30 34 L30 50" stroke="rgba(255,255,255,.8)" stroke-width="2.5" stroke-linecap="round"/><circle cx="30" cy="22" r="4" fill="rgba(255,255,255,.3)"/></svg>
+            </div>
+          </div>
+          <div class="portfolio-overlay">
+            <span>Porte-clés &amp; Badges</span>
+            <small>Objets Personnalisés</small>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portfolio-cta reveal">
+        <p style="color:var(--text-muted);margin-bottom:20px;">Vous avez un projet similaire ? Parlons-en !</p>
+        <a href="devis.html" class="btn btn-primary">Demander un devis gratuit →</a>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <div class="lightbox-inner" id="lightboxContent">
+        <div class="lightbox-img-wrap" id="lightboxImg"></div>
+        <div class="lightbox-info" id="lightboxInfo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Votre projet mérite<br />le meilleur.</h2>
+        <p>Devis gratuit, réponse en moins de 2 heures, livraison rapide à Lomé.</p>
+        <a href="devis.html" class="btn btn-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Demander un devis gratuit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-mark">FX</span>
+            <span class="logo-text">FINEX <em>PRO</em></span>
+          </a>
+          <p>Votre partenaire en impression, sérigraphie et communication visuelle à Lomé, Togo.</p>
+          <a href="https://wa.me/22897511723" target="_blank" class="footer-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            +228 97 51 17 23
+          </a>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">À propos</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="services.html#serigraphie">Sérigraphie Textile</a>
+          <a href="services.html#impression">Impression Numérique</a>
+          <a href="services.html#design">Design Graphique</a>
+          <a href="services.html#objets">Objets Personnalisés</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <span>Adidogomé Wessomé</span>
+          <span>Lomé, Togo</span>
+          <a href="https://wa.me/22897511723" target="_blank">WhatsApp: +228 97 51 17 23</a>
+          <span>Lun–Sam : 8h – 19h</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 FINEX PRO. Tous droits réservés.</span>
+        <span>Lomé, Togo · Impression &amp; Communication Visuelle</span>
+        <a href="#"><span>By NATO ephraïm,</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
