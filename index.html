@@ -29,12 +29,19 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link active">Accueil</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link">À propos</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="devis.html" class="btn btn-nav">Devis gratuit</a></li>
+        <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="services.html" class="nav-link" data-i18n="nav.services">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="devis.html" class="btn btn-nav" data-i18n="nav.devis">Devis gratuit</a></li>
+        <li class="nav-controls">
+          <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">🌙</button>
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -47,32 +54,32 @@
     <div class="hero-content">
       <div class="hero-badge reveal">
         <span class="badge-dot"></span>
-        Lomé, Togo · Impression Pro
+        <span data-i18n="hero.badge">Lomé, Togo · Impression Pro</span>
       </div>
       <h1 class="hero-title reveal">
-        Nous imprimons sur<br />
+        <span data-i18n="hero.title.prefix">Nous imprimons sur</span><br />
         <span class="hero-rotate-wrap">
           <span class="hero-rotate" id="heroRotate">T-shirts</span>
         </span>
       </h1>
       <p class="hero-sub reveal">
-        Sérigraphie · Impression numérique · Design graphique · Objets personnalisés<br />
-        <strong>La qualité, la rapidité, le professionnalisme.</strong>
+        <span data-i18n="hero.sub">Sérigraphie · Impression numérique · Design graphique · Objets personnalisés</span><br />
+        <strong data-i18n="hero.sub.strong">La qualité, la rapidité, le professionnalisme.</strong>
       </p>
       <div class="hero-ctas reveal">
         <a href="https://wa.me/22897511723?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20des%20services%20d%27impression."
            class="btn btn-primary" target="_blank">
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Contactez-nous sur WhatsApp
+          <span data-i18n="hero.cta.wa">Contactez-nous sur WhatsApp</span>
         </a>
-        <a href="devis.html" class="btn btn-outline">Demander un devis</a>
+        <a href="devis.html" class="btn btn-outline" data-i18n="hero.cta.devis">Demander un devis</a>
       </div>
       <div class="hero-stats reveal">
-        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Clients satisfaits</span></div>
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label" data-i18n="hero.stat1">Clients satisfaits</span></div>
         <div class="stat-div"></div>
-        <div class="stat"><span class="stat-num">9+</span><span class="stat-label">Années d'expérience</span></div>
+        <div class="stat"><span class="stat-num">9+</span><span class="stat-label" data-i18n="hero.stat2">Années d'expérience</span></div>
         <div class="stat-div"></div>
-        <div class="stat"><span class="stat-num">48h</span><span class="stat-label">Livraison express</span></div>
+        <div class="stat"><span class="stat-num">48h</span><span class="stat-label" data-i18n="hero.stat3">Livraison express</span></div>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -119,9 +126,9 @@
   <section class="section services" id="services">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Nos Services</span>
-        <h2 class="section-title">Tout ce dont vous avez besoin<br /><em>pour votre image</em></h2>
-        <p class="section-desc">De la conception à la livraison, FINEX PRO vous accompagne dans tous vos projets d'impression et de communication visuelle.</p>
+        <span class="section-tag" data-i18n="svc.tag">Nos Services</span>
+        <h2 class="section-title"><span data-i18n="svc.title">Tout ce dont vous avez besoin</span><br /><em data-i18n="svc.title.em">pour votre image</em></h2>
+        <p class="section-desc" data-i18n="svc.desc">De la conception à la livraison, FINEX PRO vous accompagne dans tous vos projets d'impression et de communication visuelle.</p>
       </div>
       <div class="services-grid">
         <div class="service-card reveal" data-delay="0">
@@ -195,7 +202,7 @@
         </div>
       </div>
       <div class="section-cta reveal">
-        <a href="services.html" class="btn btn-outline">Voir tous nos services →</a>
+        <a href="services.html" class="btn btn-outline" data-i18n="svc.all">Voir tous nos services →</a>
       </div>
     </div>
   </section>
@@ -204,8 +211,8 @@
   <section class="section portfolio" id="portfolio">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Nos Réalisations</span>
-        <h2 class="section-title">Nos réalisations<br /><em>parlent d'elles-mêmes</em></h2>
+        <span class="section-tag" data-i18n="pf.tag">Nos Réalisations</span>
+        <h2 class="section-title"><span data-i18n="pf.title">Nos réalisations</span><br /><em data-i18n="pf.title.em">parlent d'elles-mêmes</em></h2>
       </div>
       <div class="portfolio-grid" id="portfolioGrid">
         <div class="portfolio-item reveal" data-category="serigraphie">
@@ -276,7 +283,7 @@
         </div>
       </div>
       <div class="portfolio-cta reveal">
-        <a href="portfolio.html" class="btn btn-outline">Voir toutes nos réalisations →</a>
+        <a href="portfolio.html" class="btn btn-outline" data-i18n="pf.all">Voir toutes nos réalisations →</a>
       </div>
     </div>
     <div class="lightbox" id="lightbox">
@@ -289,8 +296,8 @@
   <section class="section testimonials">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Témoignages</span>
-        <h2 class="section-title">Ce que disent<br /><em>nos clients</em></h2>
+        <span class="section-tag" data-i18n="testi.tag">Témoignages</span>
+        <h2 class="section-title"><span data-i18n="testi.title">Ce que disent</span><br /><em data-i18n="testi.title.em">nos clients</em></h2>
       </div>
       <div class="testimonials-grid">
         <div class="testi-card reveal" data-delay="0">
@@ -332,7 +339,7 @@
 
   <!-- Partenaires -->
   <section class="partners">
-    <div class="partners-label">Ils nous font confiance</div>
+    <div class="partners-label" data-i18n="partners.label">Ils nous font confiance</div>
     <div class="partners-track-wrap">
       <div class="partners-track" id="partnersTrack">
         <div class="partner-logo">SARL Kévin &amp; Co</div>
@@ -361,10 +368,10 @@
     <div class="container">
       <div class="cta-inner">
         <h2>Prêt à donner vie<br />à votre projet ?</h2>
-        <p>Contactez-nous dès maintenant et obtenez un devis gratuit en moins de 2 heures.</p>
+        <p data-i18n="cta.desc">Contactez-nous dès maintenant et obtenez un devis gratuit en moins de 2 heures.</p>
         <a href="devis.html" class="btn btn-cta">
           <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Demander un devis gratuit
+          <span data-i18n="cta.btn">Demander un devis gratuit</span>
         </a>
       </div>
     </div>
@@ -378,38 +385,38 @@
             <span class="logo-mark">FX</span>
             <span class="logo-text">FINEX <em>PRO</em></span>
           </a>
-          <p>Votre partenaire en impression, sérigraphie et communication visuelle à Lomé, Togo.</p>
+          <p data-i18n="footer.brand.desc">Votre partenaire en impression, sérigraphie et communication visuelle à Lomé, Togo.</p>
           <a href="https://wa.me/22897511723" target="_blank" class="footer-wa">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             +228 97 51 17 23
           </a>
         </div>
         <div class="footer-links">
-          <h4>Navigation</h4>
-          <a href="index.html">Accueil</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="about.html">À propos</a>
-          <a href="contact.html">Contact</a>
+          <h4 data-i18n="footer.nav.h">Navigation</h4>
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+          <a href="about.html" data-i18n="nav.about">À propos</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
         </div>
         <div class="footer-links">
-          <h4>Services</h4>
+          <h4 data-i18n="footer.svc.h">Services</h4>
           <a href="services.html#serigraphie">Sérigraphie Textile</a>
           <a href="services.html#impression">Impression Numérique</a>
           <a href="services.html#design">Design Graphique</a>
           <a href="services.html#objets">Objets Personnalisés</a>
         </div>
         <div class="footer-links">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact.h">Contact</h4>
           <span>Adidogomé Wessomé</span>
           <span>Lomé, Togo</span>
           <a href="https://wa.me/22897511723" target="_blank">WhatsApp: +228 97 51 17 23</a>
-          <span>Lun–Sam : 8h – 19h</span>
+          <span data-i18n="footer.hours">Lun–Sam : 8h – 19h</span>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 FINEX PRO. Tous droits réservés.</span>
-        <span>Lomé, Togo · Impression &amp; Communication Visuelle</span>
+        <span data-i18n="footer.copy">© 2025 FINEX PRO. Tous droits réservés.</span>
+        <span data-i18n="footer.tagline">Lomé, Togo · Impression &amp; Communication Visuelle</span>
         <a href="#"><span>By NATO ephraïm,</span></a>
       </div>
     </div>

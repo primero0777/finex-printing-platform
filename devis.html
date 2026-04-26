@@ -29,12 +29,19 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Accueil</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-        <li><a href="about.html" class="nav-link">À propos</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="devis.html" class="btn btn-nav btn-nav--active">Devis gratuit</a></li>
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="services.html" class="nav-link" data-i18n="nav.services">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">À propos</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="devis.html" class="btn btn-nav btn-nav--active" data-i18n="nav.devis">Devis gratuit</a></li>
+        <li class="nav-controls">
+          <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">🌙</button>
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -52,8 +59,8 @@
           <span class="breadcrumb-sep">›</span>
           <span>Devis Gratuit</span>
         </nav>
-        <h1 class="page-hero-title reveal">Obtenez votre devis gratuit<br /><em style="color:var(--blue)">en 2 minutes</em></h1>
-        <p class="page-hero-sub reveal">Remplissez le formulaire ci-dessous et recevez une réponse personnalisée sous 24 heures.</p>
+        <h1 class="page-hero-title reveal"><span data-i18n="devis.hero.title">Obtenez votre devis gratuit</span><br /><em style="color:var(--blue)" data-i18n="devis.hero.em">en 2 minutes</em></h1>
+        <p class="page-hero-sub reveal" data-i18n="devis.hero.sub">Remplissez le formulaire ci-dessous et recevez une réponse personnalisée sous 24 heures.</p>
       </div>
     </div>
   </section>
@@ -62,8 +69,8 @@
   <section class="section how-it-works" style="background:var(--gray-50)">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Simple &amp; Rapide</span>
-        <h2 class="section-title">Comment ça<br /><em>marche ?</em></h2>
+        <span class="section-tag" data-i18n="devis.how.tag">Simple &amp; Rapide</span>
+        <h2 class="section-title"><span data-i18n="devis.how.title">Comment ça</span><br /><em data-i18n="devis.how.title.em">marche ?</em></h2>
       </div>
       <div class="steps-how">
         <div class="step-how reveal" data-delay="0">
@@ -117,8 +124,8 @@
 
         <!-- Étape 1 : Choix du service -->
         <div class="stepper-panel active" id="stepPanel1">
-          <h2 class="stepper-title">Quel service vous intéresse ?</h2>
-          <p class="stepper-sub">Sélectionnez le type de prestation pour lequel vous souhaitez un devis.</p>
+          <h2 class="stepper-title" data-i18n="devis.s1.title">Quel service vous intéresse ?</h2>
+          <p class="stepper-sub" data-i18n="devis.s1.sub">Sélectionnez le type de prestation pour lequel vous souhaitez un devis.</p>
           <div class="service-choice-grid">
             <div class="service-choice-card" data-service="serigraphie">
               <div class="sc-icon">
@@ -167,14 +174,14 @@
           </div>
           <div class="stepper-nav">
             <span></span>
-            <button class="btn btn-primary stepper-next" id="nextStep1" disabled>Étape suivante →</button>
+            <button class="btn btn-primary stepper-next" id="nextStep1" disabled data-i18n="devis.btn.next">Étape suivante →</button>
           </div>
         </div>
 
         <!-- Étape 2 : Détails du projet (dynamique) -->
         <div class="stepper-panel" id="stepPanel2">
-          <h2 class="stepper-title">Détails de votre projet</h2>
-          <p class="stepper-sub">Précisez vos besoins pour recevoir un devis au plus proche de la réalité.</p>
+          <h2 class="stepper-title" data-i18n="devis.s2.title">Détails de votre projet</h2>
+          <p class="stepper-sub" data-i18n="devis.s2.sub">Précisez vos besoins pour recevoir un devis au plus proche de la réalité.</p>
 
           <!-- Champs Sérigraphie -->
           <div class="detail-fields" id="fields-serigraphie" style="display:none">
@@ -344,15 +351,15 @@
           </div>
 
           <div class="stepper-nav">
-            <button class="btn btn-outline stepper-prev" id="prevStep2">← Retour</button>
-            <button class="btn btn-primary stepper-next" id="nextStep2">Étape suivante →</button>
+            <button class="btn btn-outline stepper-prev" id="prevStep2" data-i18n="devis.btn.prev">← Retour</button>
+            <button class="btn btn-primary stepper-next" id="nextStep2" data-i18n="devis.btn.next">Étape suivante →</button>
           </div>
         </div>
 
         <!-- Étape 3 : Coordonnées -->
         <div class="stepper-panel" id="stepPanel3">
-          <h2 class="stepper-title">Vos coordonnées</h2>
-          <p class="stepper-sub">Pour vous envoyer votre devis personnalisé via WhatsApp.</p>
+          <h2 class="stepper-title" data-i18n="devis.s3.title">Vos coordonnées</h2>
+          <p class="stepper-sub" data-i18n="devis.s3.sub">Pour vous envoyer votre devis personnalisé via WhatsApp.</p>
           <div class="form-group">
             <label for="coord-nom">Nom complet *</label>
             <input type="text" id="coord-nom" name="coord-nom" placeholder="Votre nom et prénom" required />
@@ -374,10 +381,10 @@
             <textarea id="coord-message" name="coord-message" rows="3" placeholder="Informations complémentaires, questions..."></textarea>
           </div>
           <div class="stepper-nav">
-            <button class="btn btn-outline stepper-prev" id="prevStep3">← Retour</button>
+            <button class="btn btn-outline stepper-prev" id="prevStep3" data-i18n="devis.btn.prev">← Retour</button>
             <button class="btn btn-primary" id="submitDevis">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              Envoyer ma demande de devis
+              <span data-i18n="devis.btn.submit">Envoyer ma demande de devis</span>
             </button>
           </div>
         </div>
@@ -422,38 +429,38 @@
             <span class="logo-mark">FX</span>
             <span class="logo-text">FINEX <em>PRO</em></span>
           </a>
-          <p>Votre partenaire en impression, sérigraphie et communication visuelle à Lomé, Togo.</p>
+          <p data-i18n="footer.brand.desc">Votre partenaire en impression, sérigraphie et communication visuelle à Lomé, Togo.</p>
           <a href="https://wa.me/22897511723" target="_blank" class="footer-wa">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             +228 97 51 17 23
           </a>
         </div>
         <div class="footer-links">
-          <h4>Navigation</h4>
-          <a href="index.html">Accueil</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="about.html">À propos</a>
-          <a href="contact.html">Contact</a>
+          <h4 data-i18n="footer.nav.h">Navigation</h4>
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <a href="services.html" data-i18n="nav.services">Services</a>
+          <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+          <a href="about.html" data-i18n="nav.about">À propos</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
         </div>
         <div class="footer-links">
-          <h4>Services</h4>
+          <h4 data-i18n="footer.svc.h">Services</h4>
           <a href="services.html#serigraphie">Sérigraphie Textile</a>
           <a href="services.html#impression">Impression Numérique</a>
           <a href="services.html#design">Design Graphique</a>
           <a href="services.html#objets">Objets Personnalisés</a>
         </div>
         <div class="footer-links">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact.h">Contact</h4>
           <span>Adidogomé Wessomé</span>
           <span>Lomé, Togo</span>
           <a href="https://wa.me/22897511723" target="_blank">WhatsApp: +228 97 51 17 23</a>
-          <span>Lun–Sam : 8h – 19h</span>
+          <span data-i18n="footer.hours">Lun–Sam : 8h – 19h</span>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 FINEX PRO. Tous droits réservés.</span>
-        <span>Lomé, Togo · Impression &amp; Communication Visuelle</span>
+        <span data-i18n="footer.copy">© 2025 FINEX PRO. Tous droits réservés.</span>
+        <span data-i18n="footer.tagline">Lomé, Togo · Impression &amp; Communication Visuelle</span>
         <a href="#"><span>By NATO ephraïm,</span></a>
       </div>
     </div>
