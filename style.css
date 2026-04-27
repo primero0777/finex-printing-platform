@@ -185,7 +185,7 @@ button { cursor: pointer; font-family: inherit; }
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 100;
+  z-index: 160;
   background: transparent;
   transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
 }
@@ -1021,7 +1021,8 @@ button { cursor: pointer; font-family: inherit; }
     z-index: 150;
   }
   .nav-links.open { right: 0; }
-  .nav-links .nav-link { color: #ffffff !important; font-size: 1.1rem; padding: 12px 0; width: 100%; }
+  .nav-links .nav-link,
+  .page-inner .nav-links .nav-link { color: #ffffff !important; font-size: 1.1rem; padding: 12px 0; width: 100%; }
   .nav-overlay {
     position: fixed;
     inset: 0;
