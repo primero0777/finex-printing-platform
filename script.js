@@ -219,7 +219,7 @@ if (contactForm) {
     if (subject) waText += `\nSujet: ${subject}`;
     waText += `\n\n${message}`;
 
-    window.open(`https://wa.me/22897511723?text=${encodeURIComponent(waText)}`, '_blank');
+    window.open(`https://wa.me/22890436929?text=${encodeURIComponent(waText)}`, '_blank');
     contactForm.reset();
 
     const btn = contactForm.querySelector('button[type="submit"]');
@@ -275,7 +275,7 @@ if (heroStats) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const statNums = entry.target.querySelectorAll('.stat-num');
-        const targets  = [500, 9, 48];
+        const targets  = [500, 4, 48];
         const suffixes = ['+', '+', 'h'];
         statNums.forEach((el, i) => animateCounter(el, targets[i], suffixes[i]));
         statsObserver.unobserve(entry.target);
@@ -472,7 +472,7 @@ if (stepperWrap) {
       if (message) waMsg += `\nMessage: ${message}`;
       waMsg += `\n━━━━━━━━━━━━━━━━━━━━`;
 
-      window.open(`https://wa.me/22897511723?text=${encodeURIComponent(waMsg)}`, '_blank');
+      window.open(`https://wa.me/22890436929?text=${encodeURIComponent(waMsg)}`, '_blank');
       submitDevis.textContent = '✓ Demande envoyée !';
       submitDevis.style.background = '#25d366';
       submitDevis.disabled = true;
@@ -510,7 +510,7 @@ const translations = {
     'hero.cta.wa':       'Contactez-nous sur WhatsApp',
     'hero.cta.devis':    'Demander un devis',
     'hero.stat1':        'Clients satisfaits',
-    'hero.stat2':        "Années d'expérience",
+    'hero.stat2':        "Domaines d'expertise",
     'hero.stat3':        'Livraison express',
     'hero.card1':        'Sérigraphie Textile',
     'hero.card2':        'Design Graphique',
@@ -581,7 +581,7 @@ const translations = {
     'svc.page.intro.tag':   'Notre Expertise',
     'svc.page.intro.title': 'FINEX PRO, votre partenaire',
     'svc.page.intro.em':    'en communication visuelle',
-    'svc.intro.p':          "Depuis plus de 9 ans, FINEX PRO accompagne entreprises, associations et particuliers à Lomé dans tous leurs projets d'impression et de communication visuelle. Grâce à des équipements modernes et une équipe experte, nous garantissons des résultats de haute qualité, des délais respectés et des prix compétitifs.",
+    'svc.intro.p':          "FINEX PRO accompagne entreprises, associations et particuliers à Lomé dans tous leurs projets d'impression et de communication visuelle. Grâce à des équipements modernes et une équipe experte, nous garantissons des résultats de haute qualité, des délais respectés et des prix compétitifs.",
     // ── Services page — detail blocks ──
     'svc.d1.tag':   'Textile & Vêtements',
     'svc.d1.title': 'Sérigraphie',
@@ -672,9 +672,9 @@ const translations = {
     'about.hist.tag':    'Notre Histoire',
     'about.hist.title':  'Une passion née',
     'about.hist.em':     'à Lomé',
-    'about.hist.p1':     "FINEX PRO a vu le jour en 2015 à Adidogomé Wessomé, dans le cœur de Lomé, portée par une vision simple mais ambitieuse : offrir aux entreprises, associations et particuliers du Togo des solutions d'impression professionnelles, accessibles et rapides.",
-    'about.hist.p2':     "Dès ses débuts, l'entreprise s'est spécialisée dans la sérigraphie textile avant d'élargir rapidement son offre à l'impression numérique grand format, au design graphique et aux objets personnalisés.",
-    'about.hist.p3':     "Aujourd'hui, notre atelier équipé de machines modernes et notre équipe de professionnels passionnés traitent chaque jour des commandes pour des clients de toute la région.",
+    'about.hist.p1':     "FINEX PRO est née à Adidogomé, au cœur de Lomé, portée par une vision simple mais ambitieuse : offrir aux entreprises, associations et particuliers du Togo des solutions d'impression professionnelles, accessibles et rapides.",
+    'about.hist.p2':     "L'entreprise s'est spécialisée dans la sérigraphie textile avant d'élargir son offre à l'impression numérique grand format, au design graphique et aux objets personnalisés.",
+    'about.hist.p3':     "Aujourd'hui, notre atelier équipé de machines modernes et notre équipe dynamique traitent chaque jour des commandes pour des clients de toute la région : boutiques, ONG, écoles, administrations et grandes entreprises.",
     'about.tagline':     'Votre partenaire impression',
     'about.mission.title': '🎯 Mission',
     'about.mission.text':  "Offrir des solutions d'impression professionnelles, abordables et rapides à chaque client, sans compromis sur la qualité.",
@@ -703,21 +703,21 @@ const translations = {
     'about.team.title':    'Notre',
     'about.team.title.em': 'Équipe',
     'about.team.desc':     "Des professionnels passionnés au service de vos projets d'impression.",
-    'about.t1.name': 'Kofi N\'Goran',
-    'about.t1.role': 'Fondateur & Directeur',
-    'about.t1.bio':  "Entrepreneur passionné d'impression depuis 2015, Kofi dirige FINEX PRO avec une vision claire : rendre la communication visuelle professionnelle accessible à tous au Togo.",
-    'about.t2.name': 'Amina Kodjo',
-    'about.t2.role': 'Directrice Artistique',
-    'about.t2.bio':  "Designer graphique diplômée avec 7 ans d'expérience, Amina supervise tous les projets créatifs et garantit la cohérence visuelle de chaque réalisation.",
-    'about.t3.name': 'Edem Mensah',
-    'about.t3.role': 'Responsable Production',
-    'about.t3.bio':  "Expert en sérigraphie et impression numérique, Edem gère l'atelier de production et s'assure que chaque commande soit livrée dans les délais avec la qualité attendue.",
+    'about.t1.name': 'FIANKE KOMLAN',
+    'about.t1.role': 'Directeur Général',
+    'about.t1.bio':  "À la tête de FINEX PRO, il pilote la vision de l'entreprise avec un engagement fort pour la qualité, la proximité et l'innovation au service des clients.",
+    'about.t2.name': 'Équipe Atelier',
+    'about.t2.role': 'Production & Impression',
+    'about.t2.bio':  "Notre équipe d'atelier assure la fabrication et l'impression de chaque commande avec précision, en respectant les délais et les exigences de qualité.",
+    'about.t3.name': 'Équipe Livraison',
+    'about.t3.role': 'Logistique & Distribution',
+    'about.t3.bio':  "Notre équipe mobile prend en charge la livraison rapide dans tout Lomé et les environs, pour que vos commandes arrivent à temps, en parfait état.",
     // ── About page — "Why us" ──
     'about.diff.tag':   'La différence FINEX PRO',
     'about.diff.title': 'Pourquoi nous',
     'about.diff.em':    'choisir ?',
-    'about.w1.h': 'Matériel Professionnel',
-    'about.w1.p': "Machines d'impression grand format dernière génération, presses sérigraphiques multicolores et équipements de découpe numérique pour des résultats précis.",
+    'about.w1.h': 'Équipements Modernes',
+    'about.w1.p': "Nous disposons d'équipements modernes adaptés à chaque type d'impression, pour des résultats précis et durables sur tous vos supports.",
     'about.w2.h': 'Devis Gratuit en 2h',
     'about.w2.p': "Envoyez votre projet via WhatsApp et recevez un devis détaillé sans engagement en moins de 2 heures ouvrables.",
     'about.w3.h': 'Livraison à Lomé',
@@ -820,7 +820,7 @@ const translations = {
     'hero.cta.wa':       'Contact us on WhatsApp',
     'hero.cta.devis':    'Get a quote',
     'hero.stat1':        'Satisfied clients',
-    'hero.stat2':        'Years of experience',
+    'hero.stat2':        'Fields of expertise',
     'hero.stat3':        'Express delivery',
     'hero.card1':        'Screen Printing',
     'hero.card2':        'Graphic Design',
@@ -891,7 +891,7 @@ const translations = {
     'svc.page.intro.tag':   'Our Expertise',
     'svc.page.intro.title': 'FINEX PRO, your partner',
     'svc.page.intro.em':    'in visual communication',
-    'svc.intro.p':          'For over 9 years, FINEX PRO has been supporting businesses, associations and individuals in Lomé with all their printing and visual communication projects. With modern equipment and an expert team, we guarantee high-quality results, on-time delivery and competitive prices.',
+    'svc.intro.p':          'FINEX PRO supports businesses, associations and individuals in Lomé with all their printing and visual communication projects. With modern equipment and an expert team, we guarantee high-quality results, on-time delivery and competitive prices.',
     // ── Services page — detail blocks ──
     'svc.d1.tag':   'Textile & Clothing',
     'svc.d1.title': 'Screen',
@@ -982,9 +982,9 @@ const translations = {
     'about.hist.tag':    'Our Story',
     'about.hist.title':  'A passion born',
     'about.hist.em':     'in Lomé',
-    'about.hist.p1':     "FINEX PRO was founded in 2015 in Adidogomé Wessomé, at the heart of Lomé, driven by a simple yet ambitious vision: to offer businesses, associations and individuals in Togo professional, accessible and fast printing solutions.",
-    'about.hist.p2':     "From the start, the company specialized in screen printing before quickly expanding into large-format digital printing, graphic design and custom products. In under ten years, FINEX PRO has become a key reference in visual communication in Togo.",
-    'about.hist.p3':     "Today, our workshop equipped with modern machinery and our team of passionate professionals handle daily orders for clients across the region: shops, NGOs, schools, municipalities and major companies all trust our expertise.",
+    'about.hist.p1':     "FINEX PRO was born in Adidogomé, at the heart of Lomé, driven by a simple yet ambitious vision: to offer businesses, associations and individuals in Togo professional, accessible and fast printing solutions.",
+    'about.hist.p2':     "The company specialized in screen printing before expanding into large-format digital printing, graphic design and custom products.",
+    'about.hist.p3':     "Today, our workshop equipped with modern machinery and our dynamic team handle daily orders for clients across the region: shops, NGOs, schools, municipalities and major companies.",
     'about.tagline':     'Your printing partner',
     'about.mission.title': '🎯 Mission',
     'about.mission.text':  "Provide professional, affordable and fast printing solutions to every client, without compromising on quality.",
@@ -1013,21 +1013,21 @@ const translations = {
     'about.team.title':    'Our',
     'about.team.title.em': 'Team',
     'about.team.desc':     'Passionate professionals dedicated to your printing projects.',
-    'about.t1.name': 'Kofi N\'Goran',
-    'about.t1.role': 'Founder & Director',
-    'about.t1.bio':  "Passionate printing entrepreneur since 2015, Kofi leads FINEX PRO with a clear vision: making professional visual communication accessible to everyone in Togo.",
-    'about.t2.name': 'Amina Kodjo',
-    'about.t2.role': 'Art Director',
-    'about.t2.bio':  "Trained graphic designer with 7 years of experience, Amina oversees all creative projects and ensures visual consistency across every production.",
-    'about.t3.name': 'Edem Mensah',
-    'about.t3.role': 'Production Manager',
-    'about.t3.bio':  "Expert in screen printing and digital printing, Edem manages the production workshop and ensures every order is delivered on time with the expected quality.",
+    'about.t1.name': 'FIANKE KOMLAN',
+    'about.t1.role': 'General Manager',
+    'about.t1.bio':  "At the helm of FINEX PRO, he drives the company vision with a strong commitment to quality, proximity and innovation in service of every client.",
+    'about.t2.name': 'Workshop Team',
+    'about.t2.role': 'Production & Printing',
+    'about.t2.bio':  "Our workshop team handles the production and printing of every order with precision, respecting deadlines and quality standards.",
+    'about.t3.name': 'Delivery Team',
+    'about.t3.role': 'Logistics & Distribution',
+    'about.t3.bio':  "Our mobile team handles fast delivery across Lomé and surrounding areas, ensuring your orders arrive on time and in perfect condition.",
     // ── About page — "Why us" ──
     'about.diff.tag':   'The FINEX PRO difference',
     'about.diff.title': 'Why choose',
     'about.diff.em':    'us?',
-    'about.w1.h': 'Professional Equipment',
-    'about.w1.p': "Latest-generation large-format printing machines, multicolor screen printing presses and digital cutting equipment for precise results.",
+    'about.w1.h': 'Modern Equipment',
+    'about.w1.p': "We use modern equipment suited to every type of printing, for precise and durable results across all your media.",
     'about.w2.h': 'Free Quote in 2h',
     'about.w2.p': "Send your project via WhatsApp and receive a detailed, no-commitment quote in under 2 business hours.",
     'about.w3.h': 'Lomé Delivery',

@@ -265,7 +265,6 @@ button { cursor: pointer; font-family: inherit; }
 .hero {
   min-height: 100vh;
   min-height: 100dvh;
-  height: 100dvh;
   background: var(--blue-dark);
   display: flex;
   align-items: center;
@@ -993,7 +992,7 @@ button { cursor: pointer; font-family: inherit; }
 
 /* ======== RESPONSIVE ======== */
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; padding-top: 140px; }
+  .hero { grid-template-columns: 1fr; padding-top: 140px; padding-bottom: 80px; }
   .hero-visual { display: none; }
   .why-inner { grid-template-columns: 1fr; gap: 48px; }
   .about-inner { grid-template-columns: 1fr; }
@@ -1174,7 +1173,7 @@ button { cursor: pointer; font-family: inherit; }
 .counter-label { font-size: 0.88rem; color: rgba(255,255,255,.55); }
 
 /* -------- TEAM -------- */
-.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; width: 100%; box-sizing: border-box; }
 .team-card {
   background: var(--white); border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg); padding: 36px 28px; text-align: center; transition: var(--transition);
