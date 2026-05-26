@@ -190,6 +190,24 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
+// -------- PARTNER LOGO LIGHTBOX --------
+document.querySelectorAll('.partner-logo[data-partner]').forEach(card => {
+  card.addEventListener('click', () => {
+    if (!lightbox || !lightboxContent) return;
+    const img  = card.querySelector('img');
+    const name = card.dataset.partner;
+    const bg        = name === 'GSC TG' ? '#0a1628' : '#fff';
+    const textColor = name === 'GSC TG' ? '#fff'    : '#0a1628';
+    lightboxContent.innerHTML = `
+      <div style="background:${bg};border-radius:16px;padding:40px 48px;display:flex;flex-direction:column;align-items:center;gap:20px;max-width:min(420px,90vw);">
+        <img src="${img.src}" alt="${img.alt}" style="max-width:280px;max-height:180px;width:auto;height:auto;object-fit:contain;">
+        <p style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:${textColor};margin:0;">${name}</p>
+      </div>`;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
 // -------- CONTACT FORM → WHATSAPP --------
 const contactForm = document.getElementById('contactForm');
 
