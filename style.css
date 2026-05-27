@@ -1366,6 +1366,23 @@ button { cursor: pointer; font-family: inherit; }
   .stepper-steps { gap: 4px; }
   .stepper-line { min-width: 30px; }
   .stepper-step span { font-size: 0.65rem; }
+  /* CEO photo card — mobile */
+  .team-card--photo .team-photo-wrap {
+    height: 320px;
+  }
+  .team-card--photo .team-photo-wrap img {
+    object-position: center 12%;
+  }
+  /* Partenaires — mobile */
+  .partner-logo {
+    width: 110px;
+    height: 64px;
+    padding: 10px 14px;
+  }
+  .partner-logo img {
+    max-height: 38px;
+  }
+  .partners-track { gap: 16px; }
 }
 @media (max-width: 480px) {
   .portfolio-grid--full { grid-template-columns: 1fr; }
