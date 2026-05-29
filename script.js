@@ -564,6 +564,7 @@ const translations = {
     'hero.card1':        'Sérigraphie Textile',
     'hero.card2':        'Design Graphique',
     'hero.card3':        'Objets Personnalisés',
+    'hero.card4':        'Impression Numérique',
     // ── Services section (index) ──
     'svc.tag':       'Nos Services',
     'svc.title':     'Tout ce dont vous avez besoin',
@@ -618,6 +619,7 @@ const translations = {
     'footer.hours':     'Lun–Sam : 8h – 19h',
     'footer.copy':      '© 2025 FINEX PRO. Tous droits réservés.',
     'footer.tagline':   'Lomé, Togo · Impression & Communication Visuelle',
+    'footer.privacy':   'Politique de confidentialité',
     'footer.svc.s1':    'Sérigraphie Textile',
     'footer.svc.s2':    'Impression Numérique',
     'footer.svc.s3':    'Design Graphique',
@@ -1002,6 +1004,7 @@ const translations = {
     'hero.card1':        'Screen Printing',
     'hero.card2':        'Graphic Design',
     'hero.card3':        'Custom Products',
+    'hero.card4':        'Digital Printing',
     // ── Services section (index) ──
     'svc.tag':       'Our Services',
     'svc.title':     'Everything you need',
@@ -1056,6 +1059,7 @@ const translations = {
     'footer.hours':     'Mon–Sat: 8am – 7pm',
     'footer.copy':      '© 2025 FINEX PRO. All rights reserved.',
     'footer.tagline':   'Lomé, Togo · Printing & Visual Communication',
+    'footer.privacy':   'Privacy Policy',
     'footer.svc.s1':    'Screen Printing',
     'footer.svc.s2':    'Digital Printing',
     'footer.svc.s3':    'Graphic Design',

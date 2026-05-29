@@ -384,8 +384,56 @@ button { cursor: pointer; font-family: inherit; }
 .stat-label { font-size: 0.78rem; color: rgba(255,255,255,.5); margin-top: 2px; }
 .stat-div { width: 1px; height: 40px; background: rgba(255,255,255,.15); }
 
-/* Hero Visual Cards */
+/* Hero Visual Cards — Image Stack */
 .hero-visual { position: relative; }
+
+/* ── nouveau stack photo ── */
+.hero-img-stack {
+  position: relative;
+  width: 520px;
+  height: 780px;
+  margin: 0 auto;
+}
+.himg-card {
+  position: absolute;
+  width: 300px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,.55);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+}
+.himg-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+.himg-card span {
+  display: block;
+  padding: 14px 20px;
+  font-family: 'Syne', sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+  color: #0a1628;
+  background: #fff;
+  white-space: nowrap;
+}
+/* 3 cartes bien espacées */
+.himg-card-1 { top: 0;    left: 110px; z-index: 3; transform: rotate(-6deg); }
+.himg-card-2 { top: 240px; left: 0px;  z-index: 2; transform: rotate(5deg);  }
+.himg-card-3 { top: 480px; left: 150px; z-index: 1; transform: rotate(-4deg); }
+
+.himg-card:hover {
+  transform: rotate(0deg) translateY(-12px) scale(1.04) !important;
+  box-shadow: 0 32px 72px rgba(0,0,0,.65);
+  z-index: 10;
+}
+
+/* ── ancienne structure (conservée pour compat) ── */
 .hero-card-stack { position: relative; height: 380px; }
 .hcard {
   position: absolute;
@@ -1195,7 +1243,7 @@ button { cursor: pointer; font-family: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center top;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -1371,7 +1419,7 @@ button { cursor: pointer; font-family: inherit; }
     height: 320px;
   }
   .team-card--photo .team-photo-wrap img {
-    object-position: center 12%;
+    object-position: center top;
   }
   /* Partenaires — mobile */
   .partner-logo {
