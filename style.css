@@ -635,7 +635,7 @@ button { cursor: pointer; font-family: inherit; }
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.88);
+  background: rgba(0,0,0,.96);
   z-index: 500;
   align-items: center;
   justify-content: center;

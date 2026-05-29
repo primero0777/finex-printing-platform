@@ -179,15 +179,21 @@ if (lightbox && portfolioItems.length) {
     });
   });
 
-  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 }
 
 function closeLightbox() {
   if (!lightbox) return;
   lightbox.classList.remove('open');
   document.body.style.overflow = '';
+}
+
+// Fermeture globale — fonctionne sur toutes les pages (portfolio, about, etc.)
+if (lightbox) {
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => {
+    if (!e.target.closest('.lightbox-inner') && !e.target.closest('.lightbox-close')) closeLightbox();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 }
 
 // -------- PARTNER LOGO LIGHTBOX --------
@@ -207,6 +213,31 @@ document.querySelectorAll('.partner-logo[data-partner]').forEach(card => {
     document.body.style.overflow = 'hidden';
   });
 });
+
+// -------- CEO PHOTO LIGHTBOX --------
+const ceoPhotoCard = document.querySelector('.team-card--photo');
+if (ceoPhotoCard && lightbox) {
+  ceoPhotoCard.style.cursor = 'zoom-in';
+  ceoPhotoCard.addEventListener('click', () => {
+    const img = ceoPhotoCard.querySelector('img');
+    if (!img) return;
+    const imgWrap  = lightbox.querySelector('#lightboxImg');
+    const infoWrap = lightbox.querySelector('#lightboxInfo');
+    if (imgWrap) {
+      // Format portrait pour la photo CEO
+      imgWrap.style.cssText = 'width:min(380px,88vw);height:min(520px,65vh);border-radius:14px;overflow:hidden;';
+      imgWrap.innerHTML = '';
+      const clone = img.cloneNode();
+      clone.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;';
+      imgWrap.appendChild(clone);
+    }
+    if (infoWrap) {
+      infoWrap.innerHTML = '<h3>FIANKE Komlan</h3><span class="lbox-cat">Directeur Général — FINEX PRO</span>';
+    }
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+}
 
 // -------- CONTACT FORM → WHATSAPP --------
 const contactForm = document.getElementById('contactForm');
@@ -685,7 +716,7 @@ const translations = {
     'pf.cta.btn':         'Demander un devis gratuit',
     // ── About page — hero ──
     'about.hero.title':  'À Propos de FINEX PRO',
-    'about.hero.sub':    'Notre histoire, nos valeurs et notre engagement pour votre réussite.',
+    'about.hero.sub':    'Imprimerie, sérigraphie, design graphique et fournitures de bureau — votre partenaire visuel à Lomé, Togo.',
     // ── About page — history ──
     'about.hist.tag':    'Notre Histoire',
     'about.hist.title':  'Une passion née',
@@ -754,8 +785,73 @@ const translations = {
     'about.loc.btn':   'Nous trouver sur Maps →',
     // ── About page — CTA ──
     'about.cta.title': 'Parlons de votre projet.',
-    'about.cta.desc':  'Notre équipe est disponible 6 jours sur 7 pour vous accompagner.',
+    'about.cta.desc':  'Notre équipe est disponible du lundi au samedi pour vous accompagner de l\'idée à la livraison.',
     'about.cta.btn':   'Nous contacter →',
+    // ── About page — présentation ──
+    'about.who.tag':      'Qui sommes-nous',
+    'about.who.title':    'FINEX PRO,',
+    'about.who.title.em': "l'impression au service de votre image",
+    'about.who.p1':       "FINEX PRO est une agence de prestation de services d'imprimerie spécialisée dans la conception de graphique visuel et le choix sur les couleurs — design graphique, conception de logo, flyers, dépliants, affiche publicitaire, impression sur tous supports (papier, habit, vinyle, bâche...).",
+    'about.who.p2':       "Implantée à Lomé – Adidogomé, nous sommes spécialisés dans les services d'imprimerie, de sérigraphie et la vente de fournitures de bureau. Nous accompagnons entreprises, associations et particuliers du Togo dans tous leurs projets de communication visuelle.",
+    'about.who.p3':       "Notre agence dispose d'une équipe dynamique pour recevoir et analyser vos demandes, et d'une équipe mobile pour vous servir et vous livrer en un temps record. Nos services ont acquis de l'expérience et de la compétence pour étudier, planifier, estimer le budget nécessaire et réaliser un projet de la phase d'étude jusqu'à son terme.",
+    'about.mission.pill': 'Mission',
+    'about.mission.val':  "Mettre à votre disposition notre expertise technique et artistique pour la réalisation de tous vos projets d'imprimerie et de sérigraphie, avec des solutions innovantes et créatives.",
+    'about.vision.pill':  'Vision',
+    'about.vision.val':   "Devenir la référence incontournable de la communication visuelle au Togo, en plaçant la satisfaction client au cœur de chaque réalisation.",
+    // ── About page — prestations ──
+    'about.svc.tag':      'Ce que nous faisons',
+    'about.svc.title':    'Nos',
+    'about.svc.title.em': 'Prestations',
+    'about.svc.desc':     "Quatre domaines d'expertise pour répondre à tous vos besoins en communication visuelle et fournitures.",
+    'about.svc1.title':   'Conception Graphique',
+    'about.svc1.p':       "Logo, carte de visite, cartes d'invitation, dépliants, badges et toute création visuelle pour votre identité de marque.",
+    'about.svc2.title':   "Travaux d'Imprimerie",
+    'about.svc2.p':       "Bâche, autocollant, calendrier, macarons, carnet de tontine, facturier et tous travaux d'impression sur papier et supports rigides.",
+    'about.svc3.title':   'Impression sur Supports',
+    'about.svc3.p':       "Impression personnalisée sur T-shirts, casquettes, tasses, stylos et tout objet promotionnel pour vos événements et campagnes.",
+    'about.svc4.title':   'Fournitures de Bureau',
+    'about.svc4.p':       "Vente et livraison d'articles bureautiques et informatiques : papeterie, mobilier de bureau et fournitures pour entreprises et administrations.",
+    // ── About page — produits ──
+    'about.prod.tag':      'Notre catalogue',
+    'about.prod.title':    'Nos',
+    'about.prod.title.em': 'Produits phares',
+    'about.prod.desc':     'Une large gamme de supports pour porter votre communication visuelle au quotidien.',
+    'about.p1.title': 'Calendrier de poche',  'about.p1.p': '8,5 × 5 cm · Quadri recto/verso — Idéal pour la distribution de masse.',
+    'about.p2.title': 'Calendrier de table',  'about.p2.p': '21 × 10 cm · Pelliculé — Design élégant, peu encombrant.',
+    'about.p3.title': 'Calendrier mural',     'about.p3.p': 'Grand format · Papier carton ou bâche — Visibilité maximale.',
+    'about.p4.title': 'Kakemono',             'about.p4.p': "Bâche & papier viril — Idéal pour les événements.",
+    'about.p5.title': 'Badges',               'about.p5.p': "Identification du personnel — Pour événements & entreprises.",
+    'about.p6.title': 'Dépliants',            'about.p6.p': "Informer sur vos activités — Format et finitions au choix.",
+    'about.p7.title': 'Sacs',                 'about.p7.p': "Accompagnez votre client pendant et après l'achat.",
+    'about.p8.title': 'T-shirts & Casquettes','about.p8.p': "Habiller votre équipe pour promos & événements.",
+    'about.p9.title': 'Cachets & Tampons',    'about.p9.p': "Timbre en caoutchouc pour marquage de supports.",
+    // ── About page — counters (actual labels) ──
+    'about.c1.label': 'Clients satisfaits',
+    'about.c2.label': "Domaines d'expertise",
+    'about.c3.label': 'Produits au catalogue',
+    'about.c4.label': 'Partenaires référencés',
+    // ── About page — team (actual roles) ──
+    'about.t2.name.a': 'Équipe Atelier',     'about.t2.role.a': 'Conception & Production',
+    'about.t3.name.a': 'Équipe Livraison',   'about.t3.role.a': 'Service & Livraison',
+    // ── About page — why us (actual content) ──
+    'about.why1.h': 'Expertise Technique & Artistique',
+    'about.why1.p': "Notre équipe maîtrise la conception graphique, la sérigraphie et l'imprimerie sur tous supports. Chaque projet est étudié, planifié et exécuté avec soin.",
+    'about.why2.h': 'Devis Gratuit en 2h',
+    'about.why2.p': "Envoyez votre projet via WhatsApp au +228 90 43 69 29 et recevez un devis détaillé et clair sans engagement en moins de 2 heures ouvrables.",
+    'about.why3.h': 'Livraison Rapide à Lomé',
+    'about.why3.p': "Notre équipe mobile assure la livraison de vos commandes partout à Lomé et ses environs, en un temps record selon vos délais.",
+    'about.why4.h': 'Validation Avant Impression',
+    'about.why4.p': "Aucune impression sans votre accord. Nous vous soumettons systématiquement un bon à tirer pour validation avant de lancer la production.",
+    'about.why5.h': 'Gamme Complète',
+    'about.why5.p': "Du design graphique aux fournitures de bureau, en passant par la sérigraphie et les gadgets publicitaires, tout est disponible chez FINEX PRO.",
+    'about.why6.h': 'Service Client Disponible',
+    'about.why6.p': "Disponibles du lundi au samedi via WhatsApp pour répondre à vos questions, vous accompagner et suivre l'avancement de votre commande.",
+    // ── About page — location labels ──
+    'about.loc.addr.label':  'Adresse',
+    'about.loc.phone.label': 'Nos numéros',
+    'about.loc.email.label': 'Email',
+    'about.loc.hours.label': "Horaires d'ouverture",
+    'about.loc.hours.val':   'Lundi – Samedi : 8h00 – 19h00',
     // ── Contact page ──
     'contact.hero.title':    'Contactez-nous',
     'contact.hero.sub':      'Nous sommes disponibles du lundi au samedi, 8h–19h. Réponse garantie sous 2 heures.',
@@ -821,6 +917,69 @@ const translations = {
     'devis.g3.p':          "Recevoir un devis ne vous engage à rien. Vous décidez librement de donner suite ou non.",
     'devis.g4.title':      'Conseils Personnalisés',
     'devis.g4.p':          "Notre équipe vous conseille sur les meilleures options selon votre budget et vos besoins.",
+    // ── Privacy page ──
+    'prv.hero.title':  'Politique de Confidentialité',
+    'prv.hero.sub':    'Comment FINEX PRO collecte, utilise et protège vos données personnelles.',
+    'prv.breadcrumb':  'Confidentialité',
+    'prv.hl1.title':   'Données sécurisées',       'prv.hl1.sub': 'Accès strictement limité en interne',
+    'prv.hl2.title':   'Aucune revente',            'prv.hl2.sub': 'Vos données ne sont jamais vendues',
+    'prv.hl3.title':   'Réponse sous 30 jours',    'prv.hl3.sub': "Pour toute demande d'exercice de droits",
+    'prv.hl4.title':   'Vos droits respectés',     'prv.hl4.sub': 'Accès, rectification, suppression',
+    'prv.toc.label':   'Sur cette page',
+    'prv.toc.date':    'Mise à jour : Mai 2025',
+    'prv.toc.1':  '01 · Qui sommes-nous ?',    'prv.toc.2':  '02 · Données collectées',
+    'prv.toc.3':  '03 · Finalité du traitement','prv.toc.4':  '04 · Base légale',
+    'prv.toc.5':  '05 · Conservation',         'prv.toc.6':  '06 · Partage des données',
+    'prv.toc.7':  '07 · Sécurité',             'prv.toc.8':  '08 · Cookies',
+    'prv.toc.9':  '09 · Vos droits',           'prv.toc.10': '10 · Modifications',
+    'prv.s1.title': 'Qui sommes-nous ?',
+    'prv.s1.p':     "La présente politique s'applique au site web de FINEX PRO, entreprise spécialisée en sérigraphie, impression numérique, design graphique et objets personnalisés, dont le siège est situé à Adidogomé Wessomé, Lomé, Togo.",
+    'prv.s1.resp':  'Responsable du traitement :',
+    'prv.s2.title': 'Données collectées',
+    'prv.s2.p1':    'Dans le cadre de l\'utilisation de notre site et de nos services, nous pouvons collecter :',
+    'prv.s2.p2':    'Ces données sont collectées uniquement via le formulaire de contact, le formulaire de devis ou vos messages WhatsApp.',
+    'prv.s2.t1':'Nom & prénom', 'prv.s2.t2':'Téléphone', 'prv.s2.t3':'Adresse e-mail',
+    'prv.s2.t4':'Données de projet', 'prv.s2.t5':'Données de navigation',
+    'prv.s3.title': 'Finalité du traitement',
+    'prv.s3.p':     'Vos données sont utilisées exclusivement pour :',
+    'prv.s3.l1':    'Répondre à vos demandes de devis et de renseignements',
+    'prv.s3.l2':    'Traiter et suivre vos commandes d\'impression et de design',
+    'prv.s3.l3':    'Vous envoyer les confirmations et mises à jour relatives à votre commande',
+    'prv.s3.l4':    'Améliorer la qualité de nos services et de notre site web',
+    'prv.s3.l5':    'Respecter nos obligations légales et comptables',
+    'prv.s3.note':  'Nous n\'utilisons pas vos données à des fins de prospection commerciale sans votre consentement préalable.',
+    'prv.s4.title': 'Base légale du traitement',
+    'prv.s4.c1.title': 'Contrat',         'prv.s4.c1.p': 'Lorsque vous passez commande ou demandez un devis',
+    'prv.s4.c2.title': 'Consentement',    'prv.s4.c2.p': 'Lorsque vous remplissez volontairement nos formulaires',
+    'prv.s4.c3.title': 'Intérêt légitime','prv.s4.c3.p': 'Pour améliorer nos services et répondre à vos demandes',
+    'prv.s5.title': 'Conservation des données',
+    'prv.s5.d1':    '1 an',   'prv.s5.d1.label': 'Données de prospection, à compter du dernier contact',
+    'prv.s5.d2':    '10 ans', 'prv.s5.d2.label': 'Données de transactions commerciales (obligations comptables)',
+    'prv.s5.p':     'Au-delà de ces délais, vos données sont définitivement supprimées ou anonymisées.',
+    'prv.s6.title': 'Partage des données',
+    'prv.s6.note':  'FINEX PRO ne vend, ne loue et ne partage jamais vos données à des tiers à des fins commerciales.',
+    'prv.s6.p':     'Un partage est possible uniquement dans ces cas strictement limités :',
+    'prv.s6.l1':    'Prestataires techniques indispensables au fonctionnement du site (hébergement)',
+    'prv.s6.l2':    'Obligation légale ou réquisition judiciaire',
+    'prv.s6.wa':    'Les messages envoyés via WhatsApp sont traités selon la politique de confidentialité de WhatsApp (Meta).',
+    'prv.s7.title': 'Sécurité des données',
+    'prv.s7.p1':    'Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, destruction ou divulgation.',
+    'prv.s7.p2':    'L\'accès aux données est strictement limité aux personnes habilitées au sein de FINEX PRO.',
+    'prv.s8.title': 'Cookies',
+    'prv.s8.p1':    'Notre site utilise un nombre minimal de cookies techniques nécessaires à son bon fonctionnement (préférences de langue, session). Nous n\'utilisons pas de cookies publicitaires ni de traceurs tiers à des fins de profilage.',
+    'prv.s8.p2':    'Vous pouvez à tout moment désactiver les cookies dans les paramètres de votre navigateur. Cela peut affecter certaines fonctionnalités du site.',
+    'prv.s9.title': 'Vos droits',
+    'prv.s9.r1.title':'Accès',         'prv.s9.r1.p': 'Obtenir une copie de vos données',
+    'prv.s9.r2.title':'Rectification', 'prv.s9.r2.p': 'Corriger des données inexactes',
+    'prv.s9.r3.title':'Effacement',    'prv.s9.r3.p': 'Demander la suppression',
+    'prv.s9.r4.title':'Opposition',    'prv.s9.r4.p': 'Vous opposer au traitement',
+    'prv.s9.r5.title':'Portabilité',   'prv.s9.r5.p': 'Recevoir vos données structurées',
+    'prv.s9.contact': 'Pour exercer vos droits, écrivez à finexpromail@gmail.com ou via WhatsApp. Réponse garantie sous 30 jours.',
+    'prv.s10.title': 'Modifications de cette politique',
+    'prv.s10.p1':   'FINEX PRO se réserve le droit de modifier la présente politique à tout moment, notamment en cas d\'évolution légale ou de changement de pratiques. La date figurant en haut de cette page sera actualisée.',
+    'prv.s10.p2':   'Nous vous encourageons à consulter régulièrement cette page pour rester informé.',
+    'prv.cta.title': 'Une question sur vos données ?',
+    'prv.cta.p':     'Notre équipe vous répond dans les meilleurs délais.',
   },
   en: {
     // ── Navbar ──
@@ -995,7 +1154,7 @@ const translations = {
     'pf.cta.btn':         'Get a free quote',
     // ── About page — hero ──
     'about.hero.title':  'About FINEX PRO',
-    'about.hero.sub':    'Our story, values and commitment to your success.',
+    'about.hero.sub':    'Printing, screen printing, graphic design and office supplies — your visual partner in Lomé, Togo.',
     // ── About page — history ──
     'about.hist.tag':    'Our Story',
     'about.hist.title':  'A passion born',
@@ -1064,8 +1223,73 @@ const translations = {
     'about.loc.btn':   'Find us on Maps →',
     // ── About page — CTA ──
     'about.cta.title': "Let's talk about your project.",
-    'about.cta.desc':  'Our team is available 6 days a week to support you.',
+    'about.cta.desc':  'Our team is available Monday to Saturday to support you from idea to delivery.',
     'about.cta.btn':   'Contact us →',
+    // ── About page — presentation ──
+    'about.who.tag':      'Who we are',
+    'about.who.title':    'FINEX PRO,',
+    'about.who.title.em': 'printing at the service of your image',
+    'about.who.p1':       "FINEX PRO is a printing services agency specializing in visual graphic design — logo design, flyers, leaflets, advertising posters, printing on all media (paper, fabric, vinyl, canvas...).",
+    'about.who.p2':       "Based in Lomé – Adidogomé, we specialize in printing, screen printing and office supply sales. We support businesses, associations and individuals across Togo in all their visual communication projects.",
+    'about.who.p3':       "Our agency has a dynamic team to receive and analyze your requests, and a mobile team to serve and deliver to you in record time. Our services have built up the experience and expertise to study, plan, estimate budgets and complete projects from start to finish.",
+    'about.mission.pill': 'Mission',
+    'about.mission.val':  "Put our technical and artistic expertise at your disposal for all your printing and screen printing projects, with innovative and creative solutions.",
+    'about.vision.pill':  'Vision',
+    'about.vision.val':   "Become the leading reference in visual communication in Togo, placing customer satisfaction at the heart of every project.",
+    // ── About page — services ──
+    'about.svc.tag':      'What we do',
+    'about.svc.title':    'Our',
+    'about.svc.title.em': 'Services',
+    'about.svc.desc':     "Four areas of expertise to meet all your visual communication and supply needs.",
+    'about.svc1.title':   'Graphic Design',
+    'about.svc1.p':       "Logo, business cards, invitation cards, leaflets, badges and all visual creations for your brand identity.",
+    'about.svc2.title':   'Printing Works',
+    'about.svc2.p':       "Banners, stickers, calendars, badges, notebooks, invoice books and all printing on paper and rigid media.",
+    'about.svc3.title':   'Printing on Materials',
+    'about.svc3.p':       "Custom printing on T-shirts, caps, mugs, pens and any promotional item for your events and campaigns.",
+    'about.svc4.title':   'Office Supplies',
+    'about.svc4.p':       "Sale and delivery of office and IT supplies: stationery, office furniture and supplies for businesses and administrations.",
+    // ── About page — products ──
+    'about.prod.tag':      'Our catalog',
+    'about.prod.title':    'Our',
+    'about.prod.title.em': 'Flagship Products',
+    'about.prod.desc':     'A wide range of media to carry your visual communication every day.',
+    'about.p1.title': 'Pocket Calendar',    'about.p1.p': '8.5 × 5 cm · Full-color front/back — Ideal for mass distribution.',
+    'about.p2.title': 'Desk Calendar',      'about.p2.p': '21 × 10 cm · Laminated — Elegant design, compact format.',
+    'about.p3.title': 'Wall Calendar',      'about.p3.p': 'Large format · Cardboard or banner — Maximum visibility.',
+    'about.p4.title': 'Roll-up Banner',     'about.p4.p': "Banner & fabric — Ideal for events.",
+    'about.p5.title': 'Badges',             'about.p5.p': "Staff identification — For events & businesses.",
+    'about.p6.title': 'Leaflets',           'about.p6.p': "Inform about your activities — Format and finish of your choice.",
+    'about.p7.title': 'Bags',               'about.p7.p': "Accompany your customer during and after purchase.",
+    'about.p8.title': 'T-shirts & Caps',    'about.p8.p': "Dress your team for promos & events.",
+    'about.p9.title': 'Stamps & Seals',     'about.p9.p': "Rubber stamp for marking all media.",
+    // ── About page — counters ──
+    'about.c1.label': 'Satisfied clients',
+    'about.c2.label': 'Areas of expertise',
+    'about.c3.label': 'Products in catalog',
+    'about.c4.label': 'Referenced partners',
+    // ── About page — team ──
+    'about.t2.name.a': 'Workshop Team',  'about.t2.role.a': 'Design & Production',
+    'about.t3.name.a': 'Delivery Team',  'about.t3.role.a': 'Service & Delivery',
+    // ── About page — why us ──
+    'about.why1.h': 'Technical & Artistic Expertise',
+    'about.why1.p': "Our team masters graphic design, screen printing and printing on all media. Every project is studied, planned and executed with care.",
+    'about.why2.h': 'Free Quote in 2h',
+    'about.why2.p': "Send your project via WhatsApp to +228 90 43 69 29 and receive a detailed, no-commitment quote in under 2 business hours.",
+    'about.why3.h': 'Fast Delivery in Lomé',
+    'about.why3.p': "Our mobile team delivers your orders across Lomé and surrounding areas, in record time according to your deadlines.",
+    'about.why4.h': 'Pre-Print Approval',
+    'about.why4.p': "No printing without your approval. We always submit a print proof for your validation before starting production.",
+    'about.why5.h': 'Complete Range',
+    'about.why5.p': "From graphic design to office supplies, screen printing to promotional items — everything is available at FINEX PRO.",
+    'about.why6.h': 'Available Customer Service',
+    'about.why6.p': "Available Monday to Saturday via WhatsApp to answer your questions, support you and track your order progress.",
+    // ── About page — location labels ──
+    'about.loc.addr.label':  'Address',
+    'about.loc.phone.label': 'Our numbers',
+    'about.loc.email.label': 'Email',
+    'about.loc.hours.label': 'Opening hours',
+    'about.loc.hours.val':   'Monday – Saturday: 8am – 7pm',
     // ── Contact page ──
     'contact.hero.title':    'Contact Us',
     'contact.hero.sub':      'Available Monday to Saturday, 8am–7pm. Reply guaranteed within 2 hours.',
@@ -1131,6 +1355,69 @@ const translations = {
     'devis.g3.p':          "Receiving a quote commits you to nothing. You freely decide whether to proceed.",
     'devis.g4.title':      'Personalized Advice',
     'devis.g4.p':          "Our team advises you on the best options based on your budget and needs.",
+    // ── Privacy page ──
+    'prv.hero.title':  'Privacy Policy',
+    'prv.hero.sub':    'How FINEX PRO collects, uses and protects your personal data.',
+    'prv.breadcrumb':  'Privacy',
+    'prv.hl1.title':   'Secured data',          'prv.hl1.sub': 'Access strictly limited internally',
+    'prv.hl2.title':   'No resale',             'prv.hl2.sub': 'Your data is never sold',
+    'prv.hl3.title':   'Response within 30 days','prv.hl3.sub': 'For any rights exercise request',
+    'prv.hl4.title':   'Your rights respected', 'prv.hl4.sub': 'Access, rectification, deletion',
+    'prv.toc.label':   'On this page',
+    'prv.toc.date':    'Updated: May 2025',
+    'prv.toc.1':  '01 · Who are we?',          'prv.toc.2':  '02 · Data collected',
+    'prv.toc.3':  '03 · Purpose of processing', 'prv.toc.4':  '04 · Legal basis',
+    'prv.toc.5':  '05 · Retention',            'prv.toc.6':  '06 · Data sharing',
+    'prv.toc.7':  '07 · Security',             'prv.toc.8':  '08 · Cookies',
+    'prv.toc.9':  '09 · Your rights',          'prv.toc.10': '10 · Changes',
+    'prv.s1.title': 'Who are we?',
+    'prv.s1.p':     "This policy applies to the FINEX PRO website, a company specializing in screen printing, digital printing, graphic design and custom products, headquartered at Adidogomé Wessomé, Lomé, Togo.",
+    'prv.s1.resp':  'Data controller:',
+    'prv.s2.title': 'Data collected',
+    'prv.s2.p1':    'In the context of using our site and services, we may collect:',
+    'prv.s2.p2':    'This data is collected only through the contact form, quote form or your WhatsApp messages.',
+    'prv.s2.t1':'First & last name', 'prv.s2.t2':'Phone', 'prv.s2.t3':'Email address',
+    'prv.s2.t4':'Project data', 'prv.s2.t5':'Browsing data',
+    'prv.s3.title': 'Purpose of processing',
+    'prv.s3.p':     'Your data is used exclusively to:',
+    'prv.s3.l1':    'Respond to your quote requests and inquiries',
+    'prv.s3.l2':    'Process and track your printing and design orders',
+    'prv.s3.l3':    'Send you confirmations and updates related to your order',
+    'prv.s3.l4':    'Improve the quality of our services and website',
+    'prv.s3.l5':    'Comply with our legal and accounting obligations',
+    'prv.s3.note':  'We do not use your data for commercial prospecting without your prior consent.',
+    'prv.s4.title': 'Legal basis for processing',
+    'prv.s4.c1.title': 'Contract',          'prv.s4.c1.p': 'When you place an order or request a quote',
+    'prv.s4.c2.title': 'Consent',           'prv.s4.c2.p': 'When you voluntarily fill in our forms',
+    'prv.s4.c3.title': 'Legitimate interest','prv.s4.c3.p': 'To improve our services and respond to your requests',
+    'prv.s5.title': 'Data retention',
+    'prv.s5.d1':    '1 year', 'prv.s5.d1.label': 'Prospecting data, from the last contact',
+    'prv.s5.d2':    '10 years','prv.s5.d2.label': 'Commercial transaction data (accounting obligations)',
+    'prv.s5.p':     'Beyond these periods, your data is permanently deleted or anonymized.',
+    'prv.s6.title': 'Data sharing',
+    'prv.s6.note':  'FINEX PRO never sells, rents or shares your data with third parties for commercial purposes.',
+    'prv.s6.p':     'Sharing is only possible in these strictly limited cases:',
+    'prv.s6.l1':    'Technical providers essential to the operation of the site (hosting)',
+    'prv.s6.l2':    'Legal obligation or judicial requisition',
+    'prv.s6.wa':    'Messages sent via WhatsApp are processed according to the WhatsApp (Meta) privacy policy.',
+    'prv.s7.title': 'Data security',
+    'prv.s7.p1':    'We implement appropriate technical and organizational measures to protect your data against unauthorized access, loss, destruction or disclosure.',
+    'prv.s7.p2':    'Access to data is strictly limited to authorized personnel within FINEX PRO.',
+    'prv.s8.title': 'Cookies',
+    'prv.s8.p1':    'Our site uses a minimal number of technical cookies necessary for its proper functioning (language preferences, session). We do not use advertising cookies or third-party trackers for profiling purposes.',
+    'prv.s8.p2':    'You can disable cookies at any time in your browser settings. This may affect some features of the site.',
+    'prv.s9.title': 'Your rights',
+    'prv.s9.r1.title':'Access',       'prv.s9.r1.p': 'Obtain a copy of your data',
+    'prv.s9.r2.title':'Rectification','prv.s9.r2.p': 'Correct inaccurate data',
+    'prv.s9.r3.title':'Erasure',      'prv.s9.r3.p': 'Request deletion',
+    'prv.s9.r4.title':'Objection',    'prv.s9.r4.p': 'Object to processing',
+    'prv.s9.r5.title':'Portability',  'prv.s9.r5.p': 'Receive your data in a structured format',
+    'prv.s9.contact': 'To exercise your rights, write to finexpromail@gmail.com or via WhatsApp. Response guaranteed within 30 days.',
+    'prv.s10.title': 'Changes to this policy',
+    'prv.s10.p1':   'FINEX PRO reserves the right to modify this policy at any time, particularly in the event of legal changes or changes in practices. The date at the top of this page will be updated.',
+    'prv.s10.p2':   'We encourage you to regularly check this page to stay informed.',
+    'prv.cta.title': 'A question about your data?',
+    'prv.cta.p':     'Our team will respond as soon as possible.',
   }
 };
 
