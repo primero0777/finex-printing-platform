@@ -1,5 +1,5 @@
 /* ===================================
-   FINEX PRO — script.js
+   FINEX PRO - script.js
    Animations, Interactions, Theme & i18n
    =================================== */
 
@@ -157,7 +157,6 @@ if (lightbox && portfolioItems.length) {
 
       if (imgWrap && infoWrap) {
         const clonedImg = item.querySelector('.portfolio-img').cloneNode(true);
-        clonedImg.style.cssText = 'width:100%;height:100%;';
         imgWrap.innerHTML = '';
         imgWrap.appendChild(clonedImg);
 
@@ -187,7 +186,7 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
-// Fermeture globale — fonctionne sur toutes les pages (portfolio, about, etc.)
+// Fermeture globale - fonctionne sur toutes les pages (portfolio, about, etc.)
 if (lightbox) {
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', e => {
@@ -232,7 +231,7 @@ if (ceoPhotoCard && lightbox) {
       imgWrap.appendChild(clone);
     }
     if (infoWrap) {
-      infoWrap.innerHTML = '<h3>FIANKE Komlan</h3><span class="lbox-cat">Directeur Général — FINEX PRO</span>';
+      infoWrap.innerHTML = '<h3>FIANKE Komlan</h3><span class="lbox-cat">Directeur Général, FINEX PRO</span>';
     }
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -509,7 +508,7 @@ if (stepperWrap) {
         details = `Type d'objet: ${type}\nQuantité: ${qte}\nPersonnalisation: ${perso || '-'}\nDélai: ${delai || 'Flexible'}`;
       }
 
-      let waMsg = `🎯 DEMANDE DE DEVIS — FINEX PRO\n`;
+      let waMsg = `🎯 DEMANDE DE DEVIS | FINEX PRO\n`;
       waMsg += `━━━━━━━━━━━━━━━━━━━━\n`;
       waMsg += `📋 Service: ${serviceLabels[selectedService] || selectedService}\n\n`;
       waMsg += `📝 DÉTAILS DU PROJET:\n${details}\n\n`;
@@ -540,7 +539,7 @@ if (stepperWrap) {
 }
 
 /* =========================================
-   I18N — TRANSLATIONS
+   I18N - TRANSLATIONS
    ========================================= */
 const translations = {
   fr: {
@@ -626,14 +625,14 @@ const translations = {
     'footer.svc.s4':    'Objets Personnalisés',
     // ── Breadcrumb ──
     'bc.home': 'Accueil',
-    // ── Services page — hero & intro ──
+    // ── Services page - hero & intro ──
     'svc.page.hero.title':  'Nos Services',
-    'svc.page.hero.sub':    "Impression professionnelle, design créatif et objets personnalisés — tout ce qu'il faut pour votre image.",
+    'svc.page.hero.sub':    "Impression professionnelle, design créatif et objets personnalisés, tout ce qu'il faut pour votre image.",
     'svc.page.intro.tag':   'Notre Expertise',
     'svc.page.intro.title': 'FINEX PRO, votre partenaire',
     'svc.page.intro.em':    'en communication visuelle',
     'svc.intro.p':          "FINEX PRO accompagne entreprises, associations et particuliers à Lomé dans tous leurs projets d'impression et de communication visuelle. Grâce à des équipements modernes et une équipe experte, nous garantissons des résultats de haute qualité, des délais respectés et des prix compétitifs.",
-    // ── Services page — detail blocks ──
+    // ── Services page - detail blocks ──
     'svc.d1.tag':   'Textile & Vêtements',
     'svc.d1.title': 'Sérigraphie',
     'svc.d1.em':    'Textile',
@@ -690,7 +689,7 @@ const translations = {
     'svc.d4.li7':   'Coussins et textiles maison',
     'svc.d4.li8':   'Calendriers et planners',
     'svc.d4.btn':   'Demander un devis Objets →',
-    // ── Services page — FAQ ──
+    // ── Services page - FAQ ──
     'svc.faq.tag':      'Questions fréquentes',
     'svc.faq.title':    'Vous avez des questions ?',
     'svc.faq.title.em': 'Nous avons les réponses.',
@@ -700,7 +699,7 @@ const translations = {
     'svc.faq.q4':       'Livrez-vous à domicile ou en dehors de Lomé ?',
     'svc.faq.q5':       'Comment se déroule la validation avant impression ?',
     'svc.faq.q6':       'Quel est votre mode de paiement ?',
-    // ── Services page — CTA ──
+    // ── Services page - CTA ──
     'svc.cta.title': 'Prêt à lancer votre projet ?',
     'svc.cta.desc':  'Obtenez un devis gratuit et personnalisé en moins de 2 heures.',
     'svc.cta.btn':   'Demander un devis gratuit',
@@ -716,10 +715,10 @@ const translations = {
     'pf.cta.title':       'Votre projet mérite le meilleur.',
     'pf.cta.p':           'Devis gratuit, réponse en moins de 2 heures, livraison rapide à Lomé.',
     'pf.cta.btn':         'Demander un devis gratuit',
-    // ── About page — hero ──
+    // ── About page - hero ──
     'about.hero.title':  'À Propos de FINEX PRO',
-    'about.hero.sub':    'Imprimerie, sérigraphie, design graphique et fournitures de bureau — votre partenaire visuel à Lomé, Togo.',
-    // ── About page — history ──
+    'about.hero.sub':    'Imprimerie, sérigraphie, design graphique et fournitures de bureau, votre partenaire visuel à Lomé, Togo.',
+    // ── About page - history ──
     'about.hist.tag':    'Notre Histoire',
     'about.hist.title':  'Une passion née',
     'about.hist.em':     'à Lomé',
@@ -731,7 +730,7 @@ const translations = {
     'about.mission.text':  "Offrir des solutions d'impression professionnelles, abordables et rapides à chaque client, sans compromis sur la qualité.",
     'about.vision.title':  '👁 Vision',
     'about.vision.text':   "Devenir la référence incontournable de la communication visuelle en Afrique de l'Ouest.",
-    // ── About page — values ──
+    // ── About page - values ──
     'about.val.tag':      'Ce qui nous définit',
     'about.val.title':    'Nos',
     'about.val.title.em': 'Valeurs',
@@ -744,12 +743,12 @@ const translations = {
     'about.val3.p':       "Basés à Lomé, nous connaissons le tissu économique local. Nous accompagnons nos clients de manière personnalisée, en comprenant leurs contraintes et leurs ambitions.",
     'about.val4.title':   'Innovation',
     'about.val4.p':       "Nous investissons régulièrement dans de nouveaux équipements pour proposer des techniques d'impression à la pointe. Notre équipe se forme continuellement aux nouvelles tendances du secteur.",
-    // ── About page — counters ──
+    // ── About page - counters ──
     'about.cnt1': 'Clients satisfaits',
     'about.cnt2': "Années d'expérience",
     'about.cnt3': 'Projets réalisés',
     'about.cnt4': 'Partenaires référencés',
-    // ── About page — team ──
+    // ── About page - team ──
     'about.team.tag':      'Les visages derrière FINEX PRO',
     'about.team.title':    'Notre',
     'about.team.title.em': 'Équipe',
@@ -763,7 +762,7 @@ const translations = {
     'about.t3.name': 'Équipe Livraison',
     'about.t3.role': 'Logistique & Distribution',
     'about.t3.bio':  "Notre équipe mobile prend en charge la livraison rapide dans tout Lomé et les environs, pour que vos commandes arrivent à temps, en parfait état.",
-    // ── About page — "Why us" ──
+    // ── About page - "Why us" ──
     'about.diff.tag':   'La différence FINEX PRO',
     'about.diff.title': 'Pourquoi nous',
     'about.diff.em':    'choisir ?',
@@ -779,28 +778,28 @@ const translations = {
     'about.w5.p': "Tarification claire et sans surprises. Devis détaillé par poste, remises dégressives sur les grandes quantités, paiement mobile money accepté.",
     'about.w6.h': 'Service Client Dédié',
     'about.w6.p': "Une équipe disponible 6 jours sur 7 via WhatsApp pour répondre à toutes vos questions, de la commande à la livraison.",
-    // ── About page — location ──
+    // ── About page - location ──
     'about.loc.tag':   'Nous trouver',
     'about.loc.title': 'Notre',
     'about.loc.em':    'Localisation',
     'about.loc.p':     'Venez nous rendre visite à notre atelier ou contactez-nous avant de vous déplacer.',
     'about.loc.btn':   'Nous trouver sur Maps →',
-    // ── About page — CTA ──
+    // ── About page - CTA ──
     'about.cta.title': 'Parlons de votre projet.',
     'about.cta.desc':  'Notre équipe est disponible du lundi au samedi pour vous accompagner de l\'idée à la livraison.',
     'about.cta.btn':   'Nous contacter →',
-    // ── About page — présentation ──
+    // ── About page - présentation ──
     'about.who.tag':      'Qui sommes-nous',
     'about.who.title':    'FINEX PRO,',
     'about.who.title.em': "l'impression au service de votre image",
-    'about.who.p1':       "FINEX PRO est une agence de prestation de services d'imprimerie spécialisée dans la conception de graphique visuel et le choix sur les couleurs — design graphique, conception de logo, flyers, dépliants, affiche publicitaire, impression sur tous supports (papier, habit, vinyle, bâche...).",
+    'about.who.p1':       "FINEX PRO est une agence de prestation de services d'imprimerie spécialisée dans la conception de graphique visuel et le choix sur les couleurs : design graphique, conception de logo, flyers, dépliants, affiche publicitaire, impression sur tous supports (papier, habit, vinyle, bâche...).",
     'about.who.p2':       "Implantée à Lomé – Adidogomé, nous sommes spécialisés dans les services d'imprimerie, de sérigraphie et la vente de fournitures de bureau. Nous accompagnons entreprises, associations et particuliers du Togo dans tous leurs projets de communication visuelle.",
     'about.who.p3':       "Notre agence dispose d'une équipe dynamique pour recevoir et analyser vos demandes, et d'une équipe mobile pour vous servir et vous livrer en un temps record. Nos services ont acquis de l'expérience et de la compétence pour étudier, planifier, estimer le budget nécessaire et réaliser un projet de la phase d'étude jusqu'à son terme.",
     'about.mission.pill': 'Mission',
     'about.mission.val':  "Mettre à votre disposition notre expertise technique et artistique pour la réalisation de tous vos projets d'imprimerie et de sérigraphie, avec des solutions innovantes et créatives.",
     'about.vision.pill':  'Vision',
     'about.vision.val':   "Devenir la référence incontournable de la communication visuelle au Togo, en plaçant la satisfaction client au cœur de chaque réalisation.",
-    // ── About page — prestations ──
+    // ── About page - prestations ──
     'about.svc.tag':      'Ce que nous faisons',
     'about.svc.title':    'Nos',
     'about.svc.title.em': 'Prestations',
@@ -813,29 +812,29 @@ const translations = {
     'about.svc3.p':       "Impression personnalisée sur T-shirts, casquettes, tasses, stylos et tout objet promotionnel pour vos événements et campagnes.",
     'about.svc4.title':   'Fournitures de Bureau',
     'about.svc4.p':       "Vente et livraison d'articles bureautiques et informatiques : papeterie, mobilier de bureau et fournitures pour entreprises et administrations.",
-    // ── About page — produits ──
+    // ── About page - produits ──
     'about.prod.tag':      'Notre catalogue',
     'about.prod.title':    'Nos',
     'about.prod.title.em': 'Produits phares',
     'about.prod.desc':     'Une large gamme de supports pour porter votre communication visuelle au quotidien.',
-    'about.p1.title': 'Calendrier de poche',  'about.p1.p': '8,5 × 5 cm · Quadri recto/verso — Idéal pour la distribution de masse.',
-    'about.p2.title': 'Calendrier de table',  'about.p2.p': '21 × 10 cm · Pelliculé — Design élégant, peu encombrant.',
-    'about.p3.title': 'Calendrier mural',     'about.p3.p': 'Grand format · Papier carton ou bâche — Visibilité maximale.',
-    'about.p4.title': 'Kakemono',             'about.p4.p': "Bâche & papier viril — Idéal pour les événements.",
-    'about.p5.title': 'Badges',               'about.p5.p': "Identification du personnel — Pour événements & entreprises.",
-    'about.p6.title': 'Dépliants',            'about.p6.p': "Informer sur vos activités — Format et finitions au choix.",
+    'about.p1.title': 'Calendrier de poche',  'about.p1.p': '8,5 × 5 cm · Quadri recto/verso. Idéal pour la distribution de masse.',
+    'about.p2.title': 'Calendrier de table',  'about.p2.p': '21 × 10 cm · Pelliculé. Design élégant, peu encombrant.',
+    'about.p3.title': 'Calendrier mural',     'about.p3.p': 'Grand format · Papier carton ou bâche. Visibilité maximale.',
+    'about.p4.title': 'Kakemono',             'about.p4.p': "Bâche & papier viril. Idéal pour les événements.",
+    'about.p5.title': 'Badges',               'about.p5.p': "Identification du personnel. Pour événements & entreprises.",
+    'about.p6.title': 'Dépliants',            'about.p6.p': "Informer sur vos activités. Format et finitions au choix.",
     'about.p7.title': 'Sacs',                 'about.p7.p': "Accompagnez votre client pendant et après l'achat.",
     'about.p8.title': 'T-shirts & Casquettes','about.p8.p': "Habiller votre équipe pour promos & événements.",
     'about.p9.title': 'Cachets & Tampons',    'about.p9.p': "Timbre en caoutchouc pour marquage de supports.",
-    // ── About page — counters (actual labels) ──
+    // ── About page - counters (actual labels) ──
     'about.c1.label': 'Clients satisfaits',
     'about.c2.label': "Domaines d'expertise",
     'about.c3.label': 'Produits au catalogue',
     'about.c4.label': 'Partenaires référencés',
-    // ── About page — team (actual roles) ──
+    // ── About page - team (actual roles) ──
     'about.t2.name.a': 'Équipe Atelier',     'about.t2.role.a': 'Conception & Production',
     'about.t3.name.a': 'Équipe Livraison',   'about.t3.role.a': 'Service & Livraison',
-    // ── About page — why us (actual content) ──
+    // ── About page - why us (actual content) ──
     'about.why1.h': 'Expertise Technique & Artistique',
     'about.why1.p': "Notre équipe maîtrise la conception graphique, la sérigraphie et l'imprimerie sur tous supports. Chaque projet est étudié, planifié et exécuté avec soin.",
     'about.why2.h': 'Devis Gratuit en 2h',
@@ -848,7 +847,7 @@ const translations = {
     'about.why5.p': "Du design graphique aux fournitures de bureau, en passant par la sérigraphie et les gadgets publicitaires, tout est disponible chez FINEX PRO.",
     'about.why6.h': 'Service Client Disponible',
     'about.why6.p': "Disponibles du lundi au samedi via WhatsApp pour répondre à vos questions, vous accompagner et suivre l'avancement de votre commande.",
-    // ── About page — location labels ──
+    // ── About page - location labels ──
     'about.loc.addr.label':  'Adresse',
     'about.loc.phone.label': 'Nos numéros',
     'about.loc.email.label': 'Email',
@@ -870,7 +869,7 @@ const translations = {
     'contact.label.subject': 'Sujet',
     'contact.label.message': 'Votre message *',
     'contact.form.btn':      'Envoyer via WhatsApp',
-    'contact.form.note':     'Réponse garantie sous 2 heures ouvrables — du lundi au samedi.',
+    'contact.form.note':     'Réponse garantie sous 2 heures ouvrables, du lundi au samedi.',
     'contact.faq.tag':       'Questions fréquentes',
     'contact.faq.title':     'Vos questions,',
     'contact.faq.title.em':  'nos réponses',
@@ -1066,14 +1065,14 @@ const translations = {
     'footer.svc.s4':    'Custom Products',
     // ── Breadcrumb ──
     'bc.home': 'Home',
-    // ── Services page — hero & intro ──
+    // ── Services page - hero & intro ──
     'svc.page.hero.title':  'Our Services',
-    'svc.page.hero.sub':    'Professional printing, creative design and custom products — everything for your image.',
+    'svc.page.hero.sub':    'Professional printing, creative design and custom products, everything for your image.',
     'svc.page.intro.tag':   'Our Expertise',
     'svc.page.intro.title': 'FINEX PRO, your partner',
     'svc.page.intro.em':    'in visual communication',
     'svc.intro.p':          'FINEX PRO supports businesses, associations and individuals in Lomé with all their printing and visual communication projects. With modern equipment and an expert team, we guarantee high-quality results, on-time delivery and competitive prices.',
-    // ── Services page — detail blocks ──
+    // ── Services page - detail blocks ──
     'svc.d1.tag':   'Textile & Clothing',
     'svc.d1.title': 'Screen',
     'svc.d1.em':    'Printing',
@@ -1130,7 +1129,7 @@ const translations = {
     'svc.d4.li7':   'Cushions and home textiles',
     'svc.d4.li8':   'Calendars and planners',
     'svc.d4.btn':   'Request a Custom Products Quote →',
-    // ── Services page — FAQ ──
+    // ── Services page - FAQ ──
     'svc.faq.tag':      'Frequently Asked Questions',
     'svc.faq.title':    'Have a question?',
     'svc.faq.title.em': 'We have the answers.',
@@ -1140,7 +1139,7 @@ const translations = {
     'svc.faq.q4':       'Do you deliver outside Lomé?',
     'svc.faq.q5':       'How does pre-print approval work?',
     'svc.faq.q6':       'What payment methods do you accept?',
-    // ── Services page — CTA ──
+    // ── Services page - CTA ──
     'svc.cta.title': 'Ready to launch your project?',
     'svc.cta.desc':  'Get a free personalized quote in less than 2 hours.',
     'svc.cta.btn':   'Get a free quote',
@@ -1156,10 +1155,10 @@ const translations = {
     'pf.cta.title':       'Your project deserves the best.',
     'pf.cta.p':           'Free quote, response in under 2 hours, fast delivery in Lomé.',
     'pf.cta.btn':         'Get a free quote',
-    // ── About page — hero ──
+    // ── About page - hero ──
     'about.hero.title':  'About FINEX PRO',
-    'about.hero.sub':    'Printing, screen printing, graphic design and office supplies — your visual partner in Lomé, Togo.',
-    // ── About page — history ──
+    'about.hero.sub':    'Printing, screen printing, graphic design and office supplies, your visual partner in Lomé, Togo.',
+    // ── About page - history ──
     'about.hist.tag':    'Our Story',
     'about.hist.title':  'A passion born',
     'about.hist.em':     'in Lomé',
@@ -1171,7 +1170,7 @@ const translations = {
     'about.mission.text':  "Provide professional, affordable and fast printing solutions to every client, without compromising on quality.",
     'about.vision.title':  '👁 Vision',
     'about.vision.text':   "Become the leading reference in visual communication in West Africa.",
-    // ── About page — values ──
+    // ── About page - values ──
     'about.val.tag':      'What defines us',
     'about.val.title':    'Our',
     'about.val.title.em': 'Values',
@@ -1184,12 +1183,12 @@ const translations = {
     'about.val3.p':       "Based in Lomé, we know the local business landscape. We support our clients in a personalized way, understanding their constraints and ambitions.",
     'about.val4.title':   'Innovation',
     'about.val4.p':       "We regularly invest in new equipment to offer cutting-edge printing techniques. Our team continually trains on the latest industry trends.",
-    // ── About page — counters ──
+    // ── About page - counters ──
     'about.cnt1': 'Satisfied clients',
     'about.cnt2': 'Years of experience',
     'about.cnt3': 'Projects completed',
     'about.cnt4': 'Referenced partners',
-    // ── About page — team ──
+    // ── About page - team ──
     'about.team.tag':      'The people behind FINEX PRO',
     'about.team.title':    'Our',
     'about.team.title.em': 'Team',
@@ -1203,7 +1202,7 @@ const translations = {
     'about.t3.name': 'Delivery Team',
     'about.t3.role': 'Logistics & Distribution',
     'about.t3.bio':  "Our mobile team handles fast delivery across Lomé and surrounding areas, ensuring your orders arrive on time and in perfect condition.",
-    // ── About page — "Why us" ──
+    // ── About page - "Why us" ──
     'about.diff.tag':   'The FINEX PRO difference',
     'about.diff.title': 'Why choose',
     'about.diff.em':    'us?',
@@ -1219,28 +1218,28 @@ const translations = {
     'about.w5.p': "Clear, no-surprise pricing. Detailed line-item quotes, volume discounts, mobile money payment accepted.",
     'about.w6.h': 'Dedicated Customer Service',
     'about.w6.p': "A team available 6 days a week via WhatsApp to answer all your questions from order to delivery.",
-    // ── About page — location ──
+    // ── About page - location ──
     'about.loc.tag':   'Find us',
     'about.loc.title': 'Our',
     'about.loc.em':    'Location',
     'about.loc.p':     'Come visit our workshop or contact us before stopping by.',
     'about.loc.btn':   'Find us on Maps →',
-    // ── About page — CTA ──
+    // ── About page - CTA ──
     'about.cta.title': "Let's talk about your project.",
     'about.cta.desc':  'Our team is available Monday to Saturday to support you from idea to delivery.',
     'about.cta.btn':   'Contact us →',
-    // ── About page — presentation ──
+    // ── About page - presentation ──
     'about.who.tag':      'Who we are',
     'about.who.title':    'FINEX PRO,',
     'about.who.title.em': 'printing at the service of your image',
-    'about.who.p1':       "FINEX PRO is a printing services agency specializing in visual graphic design — logo design, flyers, leaflets, advertising posters, printing on all media (paper, fabric, vinyl, canvas...).",
+    'about.who.p1':       "FINEX PRO is a printing services agency specializing in visual graphic design: logo design, flyers, leaflets, advertising posters, printing on all media (paper, fabric, vinyl, canvas...).",
     'about.who.p2':       "Based in Lomé – Adidogomé, we specialize in printing, screen printing and office supply sales. We support businesses, associations and individuals across Togo in all their visual communication projects.",
     'about.who.p3':       "Our agency has a dynamic team to receive and analyze your requests, and a mobile team to serve and deliver to you in record time. Our services have built up the experience and expertise to study, plan, estimate budgets and complete projects from start to finish.",
     'about.mission.pill': 'Mission',
     'about.mission.val':  "Put our technical and artistic expertise at your disposal for all your printing and screen printing projects, with innovative and creative solutions.",
     'about.vision.pill':  'Vision',
     'about.vision.val':   "Become the leading reference in visual communication in Togo, placing customer satisfaction at the heart of every project.",
-    // ── About page — services ──
+    // ── About page - services ──
     'about.svc.tag':      'What we do',
     'about.svc.title':    'Our',
     'about.svc.title.em': 'Services',
@@ -1253,29 +1252,29 @@ const translations = {
     'about.svc3.p':       "Custom printing on T-shirts, caps, mugs, pens and any promotional item for your events and campaigns.",
     'about.svc4.title':   'Office Supplies',
     'about.svc4.p':       "Sale and delivery of office and IT supplies: stationery, office furniture and supplies for businesses and administrations.",
-    // ── About page — products ──
+    // ── About page - products ──
     'about.prod.tag':      'Our catalog',
     'about.prod.title':    'Our',
     'about.prod.title.em': 'Flagship Products',
     'about.prod.desc':     'A wide range of media to carry your visual communication every day.',
-    'about.p1.title': 'Pocket Calendar',    'about.p1.p': '8.5 × 5 cm · Full-color front/back — Ideal for mass distribution.',
-    'about.p2.title': 'Desk Calendar',      'about.p2.p': '21 × 10 cm · Laminated — Elegant design, compact format.',
-    'about.p3.title': 'Wall Calendar',      'about.p3.p': 'Large format · Cardboard or banner — Maximum visibility.',
-    'about.p4.title': 'Roll-up Banner',     'about.p4.p': "Banner & fabric — Ideal for events.",
-    'about.p5.title': 'Badges',             'about.p5.p': "Staff identification — For events & businesses.",
-    'about.p6.title': 'Leaflets',           'about.p6.p': "Inform about your activities — Format and finish of your choice.",
+    'about.p1.title': 'Pocket Calendar',    'about.p1.p': '8.5 × 5 cm · Full-color front/back. Ideal for mass distribution.',
+    'about.p2.title': 'Desk Calendar',      'about.p2.p': '21 × 10 cm · Laminated. Elegant design, compact format.',
+    'about.p3.title': 'Wall Calendar',      'about.p3.p': 'Large format · Cardboard or banner. Maximum visibility.',
+    'about.p4.title': 'Roll-up Banner',     'about.p4.p': "Banner & fabric. Ideal for events.",
+    'about.p5.title': 'Badges',             'about.p5.p': "Staff identification. For events & businesses.",
+    'about.p6.title': 'Leaflets',           'about.p6.p': "Inform about your activities. Format and finish of your choice.",
     'about.p7.title': 'Bags',               'about.p7.p': "Accompany your customer during and after purchase.",
     'about.p8.title': 'T-shirts & Caps',    'about.p8.p': "Dress your team for promos & events.",
     'about.p9.title': 'Stamps & Seals',     'about.p9.p': "Rubber stamp for marking all media.",
-    // ── About page — counters ──
+    // ── About page - counters ──
     'about.c1.label': 'Satisfied clients',
     'about.c2.label': 'Areas of expertise',
     'about.c3.label': 'Products in catalog',
     'about.c4.label': 'Referenced partners',
-    // ── About page — team ──
+    // ── About page - team ──
     'about.t2.name.a': 'Workshop Team',  'about.t2.role.a': 'Design & Production',
     'about.t3.name.a': 'Delivery Team',  'about.t3.role.a': 'Service & Delivery',
-    // ── About page — why us ──
+    // ── About page - why us ──
     'about.why1.h': 'Technical & Artistic Expertise',
     'about.why1.p': "Our team masters graphic design, screen printing and printing on all media. Every project is studied, planned and executed with care.",
     'about.why2.h': 'Free Quote in 2h',
@@ -1285,10 +1284,10 @@ const translations = {
     'about.why4.h': 'Pre-Print Approval',
     'about.why4.p': "No printing without your approval. We always submit a print proof for your validation before starting production.",
     'about.why5.h': 'Complete Range',
-    'about.why5.p': "From graphic design to office supplies, screen printing to promotional items — everything is available at FINEX PRO.",
+    'about.why5.p': "From graphic design to office supplies, screen printing to promotional items, everything is available at FINEX PRO.",
     'about.why6.h': 'Available Customer Service',
     'about.why6.p': "Available Monday to Saturday via WhatsApp to answer your questions, support you and track your order progress.",
-    // ── About page — location labels ──
+    // ── About page - location labels ──
     'about.loc.addr.label':  'Address',
     'about.loc.phone.label': 'Our numbers',
     'about.loc.email.label': 'Email',
@@ -1310,7 +1309,7 @@ const translations = {
     'contact.label.subject': 'Subject',
     'contact.label.message': 'Your message *',
     'contact.form.btn':      'Send via WhatsApp',
-    'contact.form.note':     'Reply guaranteed within 2 business hours — Monday to Saturday.',
+    'contact.form.note':     'Reply guaranteed within 2 business hours, Monday to Saturday.',
     'contact.faq.tag':       'Frequently Asked Questions',
     'contact.faq.title':     'Your questions,',
     'contact.faq.title.em':  'our answers',
@@ -1444,7 +1443,7 @@ function applyTranslation(lang) {
   }
 }
 
-// Language switcher — init on page load
+// Language switcher - init on page load
 (function () {
   const savedLang = localStorage.getItem('finex-lang') || 'fr';
   applyTranslation(savedLang);

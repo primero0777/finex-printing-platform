@@ -1,5 +1,5 @@
 /* ===================================
-   FINEX PRO — style.css
+   FINEX PRO - style.css
    Modern Corporate · Blue Edition
    =================================== */
 
@@ -384,7 +384,7 @@ button { cursor: pointer; font-family: inherit; }
 .stat-label { font-size: 0.78rem; color: rgba(255,255,255,.5); margin-top: 2px; }
 .stat-div { width: 1px; height: 40px; background: rgba(255,255,255,.15); }
 
-/* Hero Visual Cards — Image Stack */
+/* Hero Visual Cards - Image Stack */
 .hero-visual { position: relative; }
 
 /* ── nouveau stack photo ── */
@@ -1380,7 +1380,9 @@ button { cursor: pointer; font-family: inherit; }
 
 /* -------- LIGHTBOX ENHANCED -------- */
 .lightbox-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 90vw; }
-.lightbox-img-wrap { width: min(600px, 90vw); height: min(400px, 55vh); border-radius: 14px; overflow: hidden; }
+.lightbox-img-wrap { max-width: 90vw; max-height: 70vh; border-radius: 14px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.lightbox-img-wrap .portfolio-img { width: auto !important; height: auto !important; aspect-ratio: auto !important; background: none; display: flex; }
+.lightbox-img-wrap img { display: block; width: auto !important; height: auto !important; max-width: 90vw; max-height: 70vh; object-fit: contain !important; transform: none !important; border-radius: 14px; }
 .lightbox-info { text-align: center; color: var(--white); padding: 0 20px; }
 .lightbox-info h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
 .lightbox-info .lbox-cat { font-size: 0.82rem; color: var(--blue); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; display: block; }
@@ -1414,14 +1416,14 @@ button { cursor: pointer; font-family: inherit; }
   .stepper-steps { gap: 4px; }
   .stepper-line { min-width: 30px; }
   .stepper-step span { font-size: 0.65rem; }
-  /* CEO photo card — mobile */
+  /* CEO photo card - mobile */
   .team-card--photo .team-photo-wrap {
     height: 320px;
   }
   .team-card--photo .team-photo-wrap img {
     object-position: center top;
   }
-  /* Partenaires — mobile */
+  /* Partenaires - mobile */
   .partner-logo {
     width: 110px;
     height: 64px;
